@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1234]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testng.TestNGClassSNDTUniversity">
+        <methods>
+          <include name="verifyURLOnStudentName"/>
+          <include name="afterSuite"/>
+          <include name="getTextStudentName"/>
+          <include name="afteTest"/>
+          <include name="browserSuite"/>
+          <include name="openBrowser"/>
+          <include name="openLink"/>
+          <include name="quit"/>
+          <include name="closeed"/>
+          <include name="verifyURLOnStudent"/>
+        </methods>
+      </class> <!-- testng.TestNGClassSNDTUniversity -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite1234] -->
