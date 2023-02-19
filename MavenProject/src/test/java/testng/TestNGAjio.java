@@ -39,7 +39,7 @@ public class TestNGAjio extends Browser {
  WebDriver driver;
 private SoftAssert softAssert;
 private String TestID;
-
+private HomePageAjio homePageAjio;
 
 @BeforeSuite
 public void beforeSuit() {
@@ -62,9 +62,10 @@ public void OpenBrowser(String browser ) throws IOException {
 	
 }
 
-//@BeforeClass
-//public void OpenBrowser() {
-//}
+@BeforeClass
+public void OpenBrowser() {
+	homePageAjio=new HomePageAjio(driver);
+}
 
 @BeforeMethod
 public void openUrl() throws IOException {
@@ -81,7 +82,7 @@ public void openUrl() throws IOException {
 }
 @Test
 public void verifyKidsGetText() throws InterruptedException {
-	TestID="T122";
+	//TestID="T122";
 	System.out.println("Test-A");
 	HomePageAjio homePage=new HomePageAjio(driver);
 
@@ -93,7 +94,6 @@ public void verifyKidsGetText() throws InterruptedException {
 	softAssert=new SoftAssert();
 	
 	softAssert.assertEquals(actualURL, expectedURL);
-	softAssert.assertNotEquals(actualURL, expectedURL);
 	softAssert.assertAll();
 		
 	//String expectedURL="https://www.ajio.com/shop/kids123";
@@ -106,9 +106,9 @@ public void verifyKidsGetText() throws InterruptedException {
 //		System.out.println("Fail");
 //	}
 }
-@Test
+@Test()
 public void verifyMenText() {
-	TestID="T123";
+	//TestID="T123";
 	System.out.println("Test-B");
 //CustomerCarePage customerCarePage=new CustomerCarePage(driver);
 	//HomePageAjio homePage=new HomePageAjio(driver);
@@ -124,7 +124,6 @@ String actualURL=driver.getCurrentUrl();
 String expectedURL="https://www.ajio.com/shop/men";
 softAssert =new SoftAssert();
 softAssert.assertEquals(actualURL, expectedURL);
-softAssert.assertNotEquals(actualURL, expectedURL);
 softAssert.assertAll();
 }
 //String actualTitle=driver.getTitle();
@@ -143,23 +142,24 @@ softAssert.assertAll();
 //}
 
 
-@AfterMethod
-public void afterMethod(ITestResult result) throws IOException, InterruptedException {
-if(ITestResult.FAILURE == result.getStatus());
-	Utility.captureScreenshot(driver, TestID);
-}
+//@AfterMethod
+//public void afterMethod(ITestResult result) throws IOException, InterruptedException {
+//if(ITestResult.FAILURE == result.getStatus());
+//	Utility.captureScreenshot(driver, TestID);
+//}
 
 
 
 @AfterClass
 public void close() {
 	System.out.println("after class");
-	driver.quit();
-
+	//homePageAjio=null;
 	}
 @AfterTest
 public void afterrTest() {
 	System.out.println("After Test-TestNGClass");
+	driver.quit();
+
 }	
 @AfterSuite
 public void afterSuite() {
