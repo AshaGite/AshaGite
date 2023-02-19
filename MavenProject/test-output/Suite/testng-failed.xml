@@ -4,19 +4,20 @@
   <test thread-count="1" parallel="classes" name="ChromeTest(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="testng.TestNGFacebook">
+      <class name="testng.TestNGClassSNDTUniversity">
         <methods>
+          <include name="verifyURLOnStudentName"/>
+          <include name="afterSuit"/>
+          <include name="afterTest"/>
+          <include name="browserSuite"/>
+          <include name="openBrowser"/>
+          <include name="openLink"/>
           <include name="OpenBrowser"/>
-          <include name="afterSuite"/>
-          <include name="beforeSuit"/>
-          <include name="beforeMethod"/>
-          <include name="verifycookiesPolicy"/>
-          <include name="afterMethod"/>
-          <include name="clearPomObject"/>
-          <include name="close"/>
-          <include name="verifyprivacyPolicy"/>
+          <include name="CloseAllTab"/>
+          <include name="closeed"/>
+          <include name="verifyURLOnStudent"/>
         </methods>
-      </class> <!-- testng.TestNGFacebook -->
+      </class> <!-- testng.TestNGClassSNDTUniversity -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

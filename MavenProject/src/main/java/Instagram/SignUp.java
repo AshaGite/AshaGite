@@ -40,7 +40,7 @@ public void SendfirstName() {
 	firstName.sendKeys("Asha");
 }
 
-public void SendMobNoOrEmailId() {
+public void SendMobNoOrEmailId(String string) {
 	mobNoOrEmail.sendKeys("9689930633");
 }
 

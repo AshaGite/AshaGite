@@ -3,18 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testng.TestNG_Instagram">
+      <class name="testng.TestNGAjio">
         <methods>
-          <include name="VerifyTextOnSignUpPage"/>
-          <include name="VeriyfyTerms"/>
-          <include name="afterTest"/>
-          <include name="afterSuit"/>
-          <include name="OpenLink"/>
-          <include name="VeriyfyPrivacyPolicy"/>
+          <include name="afterrTest"/>
+          <include name="verifyKidsGetText"/>
           <include name="OpenBrowser"/>
-          <include name="CloseAllTab"/>
+          <include name="close"/>
+          <include name="openUrl"/>
+          <include name="verifyMenText"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuit"/>
         </methods>
-      </class> <!-- testng.TestNG_Instagram -->
+      </class> <!-- testng.TestNGAjio -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -35,7 +35,7 @@ public class TestNG_Instagram extends Browser {
 	
 		WebDriver driver;
 		private SignUp signUp;
-		private String TestID;
+		//private String TestID;
 
 		
 
@@ -66,39 +66,32 @@ public class TestNG_Instagram extends Browser {
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 		}
-//		@BeforeClass
-//		public void OpenBrowser() throws InterruptedException {
-//			CPT cpt;
-
-//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Usha\\Downloads\\chromedriver_win32/chromedriver.exe");
-//		driver=new ChromeDriver();
-//		//driver.get("https://twitter.com/");
-//		Thread.sleep(1000);
-//		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//		driver.manage().window().maximize();
-//	
-	///}
+@BeforeClass
+public void openURl() {
+	signUp=new SignUp(driver);	
+}
 	@BeforeMethod
 	public void  OpenLink() throws InterruptedException, Exception {
 			System.out.println("Before Method");
 			driver.get("https://www.instagram.com/");
 			Thread.sleep(1000);
-			SignUp signUp=new SignUp(driver);
-			//String user=Utility.getDataFromExcel("TestData", 1, 0);
-			//signUp.SendfirstName(Utility.getDataFromExcel ("TestData",1,0));
-//			loginOrSignUpPage.sendUser(Utility.getDataFromExcel("TestData", 1, 0));
+			signUp=new SignUp(driver);
 			
-//			signUp.SendfirstName(Utility.getDataFromExcel ("C:\\All JAVA files\\Asha\\Rani.xlsx","Asha",1,0));
-//			signUp.SendMobNoOrEmailId(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Rani.xlsx","Asha",1,1));
-			signUp.SendfirstName();
-			signUp.SendMobNoOrEmailId();
 			signUp.ClickOnSignUp();
 
+			signUp.SendfirstName(Utility.getDataFromExcel ("C:\\All JAVA files\\Asha\\Book1.xlsx","Asha",1,0));
+			signUp.SendMobNoOrEmailId(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx","Asha",1,1));
+			
 			softAssert=new SoftAssert();
 
 	}
-	@Test
 	
+	
+	
+	
+	
+	
+	@Test
 public void VeriyfyTerms() throws InterruptedException {
 		//TestID="T101";
 
@@ -123,17 +116,9 @@ public void VeriyfyTerms() throws InterruptedException {
 		softAssert.assertEquals(actualURL, expectedURL);
 		softAssert.assertEquals(actualTitle, expectedTitle);
 		softAssert.assertAll();
+	}
 		//Thread.sleep(1000);
-//		if(actualURL.equals(expectedURL)&&actualTitle.equals(expectedTitle))
-//		
-//		{
-//			System.out.println("Pass");
-//				}
-//		else {
-//			System.out.println("Fail");
-//		}
-			
-		}
+
 	@Test
 	
 	public void VeriyfyPrivacyPolicy() throws InterruptedException {
@@ -158,18 +143,8 @@ public void VeriyfyTerms() throws InterruptedException {
 			softAssert.assertEquals(actualURL, expectedURL);
 			softAssert.assertEquals(actualTitle, expectedTitle);
 			softAssert.assertAll();
-			//Thread.sleep(1000);
-			//Assert.assertEquals(actualTitle, expectedTitle);
-//			if(actualURL.equals(expectedURL)&&actualTitle.equals(expectedTitle))
-//			
-//			{
-//				System.out.println("Pass");
-//					}
-//			else {
-//				System.out.println("Fail");
-//			}
-//				
-			}
+	}
+			
 	
 	@Test 
 	public void VerifyCookiesPolicy() throws InterruptedException {
@@ -192,34 +167,23 @@ public void VeriyfyTerms() throws InterruptedException {
 	softAssert.assertEquals(actualURL, expectedURL);
 	softAssert.assertEquals(actualTitle, expectedTitle);
 	softAssert.assertAll();
-//	if(actualText.equals(expectedText)) {
-//		System.out.println("Pass");
-//	}
-//	else {
-//		System.out.println("Fail");
-//	}
-//	
-	
 	}
-	@AfterMethod
-		public void afterMethod(ITestResult result) throws IOException, InterruptedException {
-		if(ITestResult.FAILURE == result.getStatus());{
-			Utility.captureScreenshot(driver, TestID);
-		}
-	Thread.sleep(3000);
-	
-ArrayList<String>addr=new ArrayList<String>(driver.getWindowHandles());
-driver.switchTo().window(addr.get(0));
-//driver.close();
-}
+//	@AfterMethod
+//	public void afterMethod(ITestResult result) throws IOException, InterruptedException {
+//	if(ITestResult.FAILURE == result.getStatus());{
+//		Utility.captureScreenshot(driver, TestID);
+//	}
+//	}
 	@AfterClass
-public void CloseAllTab() {
-	driver.quit();
-}
-	@AfterTest
+	public void afterClass() {
+		signUp=null;
+	}
+	
+@AfterTest
 	public void afterTest() {
 		System.out.println("After Test-TestNGClass");
-	}
+driver.quit();	
+}
 	@AfterSuite
 	public void afterSuit() {
 		System.out.println("After Suit-TestNGClass");

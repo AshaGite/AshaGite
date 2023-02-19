@@ -10,6 +10,7 @@ private WebDriver driver;
 	@FindBy(xpath="(//a[text()='Terms'])[2]")
 	private WebElement terms;
 	
+	
 	@FindBy(xpath="(//a[text()='Cookies Policy'])")
 	private WebElement cookiesPolicy;
 	
@@ -22,7 +23,13 @@ private WebDriver driver;
 	@FindBy(xpath="//span[text()='Cookies Policy']")
 	private WebElement getcookiesPolicy;
 	
+	@FindBy(xpath="//input[@name='firstname']")
+	private WebElement firstName;
 	
+	@FindBy(xpath="//input[@name='lastname']")
+	private WebElement lastName;
+	@FindBy(xpath="//input[@name='reg_email__']")
+	private WebElement mobNo;
 	
 	public SignUpPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -49,5 +56,14 @@ private WebDriver driver;
 	public String getTextCookiesPolicy() {
 		String text=getcookiesPolicy.getText();
 	return text;
+	}
+	public void sendFirstName(String user) {
+		firstName.sendKeys(user);
+	}
+	public void sendLastName(String user) {
+		lastName.sendKeys(user);
+	}
+	public void sendMob(String user) {
+		mobNo.sendKeys(user);
 	}
 }

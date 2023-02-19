@@ -131,11 +131,11 @@ public void VerifySignInPage() throws InterruptedException {
 //}
 }
 
-@AfterMethod
-public void afterMethod(ITestResult result) throws IOException, InterruptedException {
-	if(ITestResult.FAILURE == result.getStatus());
-		Utility.captureScreenshot(driver, TestID);
-	}
+//@AfterMethod
+//public void afterMethod(ITestResult result) throws IOException, InterruptedException {
+//	if(ITestResult.FAILURE == result.getStatus());
+//		Utility.captureScreenshot(driver, TestID);
+//	}
 
 @AfterClass
 public void closeBrowser() {

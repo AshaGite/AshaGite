@@ -16,8 +16,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-
+import org.testng.asserts.SoftAssert;
 
 import SNDTUniversity.HomePage;
 import SNDTUniversity.Name;
@@ -27,6 +26,8 @@ import browser.Browser;
 public class TestNGClassSNDTUniversity extends Browser {
 	private WebDriver driver;
 	private HomePage homePage;
+	private SoftAssert softAssert;
+
 	@BeforeSuite
 	public void browserSuite() {
 		System.out.println("Browser Suite");
@@ -44,15 +45,13 @@ public class TestNGClassSNDTUniversity extends Browser {
 			driver=openOperaBrwser();
 		}
 	}
-	/*@BeforeClass
+	@BeforeClass
 	public void OpenBrowser() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Usha\\Downloads\\chromedriver_win32/chromedriver.exe");
-		driver=new ChromeDriver();
-		
+		homePage =new HomePage(driver);
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-	*///}
+	}
 	
 	
 		@BeforeMethod
@@ -64,19 +63,26 @@ public class TestNGClassSNDTUniversity extends Browser {
 		@Test(priority=1)
 		public void verifyURLOnStudent() throws InterruptedException{
 			System.out.println("test-1");
+			Thread.sleep(1000);
 			homePage.ClickOnStudents();
-			Thread.sleep(5000);
-			String actualTitle = driver.getTitle();
-					
-			String expectedTitle="Students | SNDT Women's University";
-			if(actualTitle.equals(expectedTitle))
-			{
-				System.out.println("PASSED");
-			}
-			else
-			{
-				System.out.println("FAILED");
-			}
+			Thread.sleep(3000);
+			
+		String actualURL = driver.getCurrentUrl();
+		String expectedURL="https://sndt.ac.in/index.php/students-sndt";
+		Thread.sleep(5000);
+
+		softAssert =new SoftAssert();
+		softAssert.assertEquals(actualURL, expectedURL);
+		softAssert.assertAll();
+		}
+		//if(actualTitle.equals(expectedTitle))
+//			{
+//				System.out.println("PASSED");
+//			}
+//			else
+//			{
+//				System.out.println("FAILED");
+//			}
 
 			
 			
@@ -85,13 +91,12 @@ public class TestNGClassSNDTUniversity extends Browser {
 			/String actualText= ;
 			*///String expectedText="Sign in to Twitter";
 			
-		}
+		
 		
 		@Test(priority=2)
 		public void verifyURLOnStudentName() throws InterruptedException {
 			System.out.println("test-2");
 			Name name=new Name(driver);
-			Thread.sleep(5000);
 			name.ClickOnStudentsName();
 			
 
@@ -99,45 +104,56 @@ public class TestNGClassSNDTUniversity extends Browser {
 			
 			String actualURL = driver.getCurrentUrl();
 			String expectedURL="https://sndt.ac.in/notable-alumni/anita-dongre";
-			
+			Thread.sleep(5000);
+
+			softAssert =new SoftAssert();
+
+			softAssert.assertEquals(actualURL, expectedURL);
+			softAssert.assertAll();
+			}
 			//String actualTitle = driver.getTitle();
 			//String expectedTitle = "Students | SNDT Women's University";
 			
-			if( actualURL.equals(expectedURL))
-			{
-				System.out.println("PASSED");
-			}
-			
-			else
-			{
-				System.out.println("FAILED");
-			}
-		}
+//			if( actualURL.equals(expectedURL))
+//			{
+//				System.out.println("PASSED");
+//			}
+//			
+//			else
+//			{
+//				System.out.println("FAILED");
+//			}
+		
 		@Test(priority=3)
 		public void getTextStudentName() throws InterruptedException {
 			System.out.println("test-3");
-			//JavascriptExecutor js= (JavascriptExecutor)driver;
-			//js.executeScript("window.ScrollBy(0,3000)");
+
 			Name212 name212=new Name212(driver);
 			name212.ClickOnRevati();
+			
+			String actualURL=driver.getCurrentUrl();
+			String expectedURL="https://sndt.ac.in/index.php/musicpune/dr-revati-kamat";
 			Thread.sleep(5000);
 
+			softAssert =new SoftAssert();
+			softAssert.assertEquals(actualURL, expectedURL);
+			softAssert.assertAll();
+			}
+			//if(actualURL.equals(expectdURL)) {
+//				System.out.println("Pass");
+//			}
+//			else {
+//				System.out.println("Fail");
+//			}
 		
-			String actualURL=driver.getCurrentUrl();
-			String expectedURL="https://sndt.ac.in/musicpune/dr-revati-kamat";
-			if(actualURL.equals(expectedURL)) {
-				System.out.println("Pass");
-			}
-			else {
-				System.out.println("Fail");
-			}
-		}
+		
 		@AfterMethod
-		public void closeed() {
+		public void closeed() throws InterruptedException {
 			System.out.println("After Method");
 			//driver.close();
-			//ArrayList<String> addr = new ArrayList<String>(driver.getWindowHandles());
-			//driver.switchTo().window(addr.get(0));
+			Thread.sleep(2000);
+			ArrayList<String> addr = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(addr.get(0));
 		}
 		
 		@AfterClass

@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.util.SystemOutLogger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -19,12 +19,27 @@ import org.openqa.selenium.io.FileHandler;
 public class Utility {
 	WebDriver driver;
 	
-	//2 Methods
-	//public static
-	//ScreenShot Method
-	//ExcelSheet Method
+	public static String getDataFromExcel(String path,String sheet,int row,int cell) throws Exception  {
+		//String path="C:\\All JAVA files\\Asha\\Rani.xlsx";
+	double data1;
+	String data;
+	long data2;
 	
-		public static void captureScreenshot( WebDriver driver , String TestId) throws IOException, InterruptedException {
+	FileInputStream file=new FileInputStream(path);
+		Workbook workbook=WorkbookFactory.create(file);
+		Sheet sheet1=workbook.getSheet(sheet);
+		try {
+			data=sheet1.getRow(row).getCell(cell).getStringCellValue();
+		return data;
+		}
+		catch (Exception e){
+			data1=sheet1.getRow(row).getCell(cell).getNumericCellValue();
+			data2=(long)data1;
+			return String.valueOf(data2);
+		}
+	}
+
+public static void captureScreenshot( WebDriver driver , String TestId) throws IOException, InterruptedException {
 			
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH-mm-ss");  
 			TakesScreenshot t=(TakesScreenshot)driver;
@@ -36,27 +51,20 @@ File dest=new File("C:\\Users\\Usha\\OneDrive\\Documents\\ASHA\\test"+dtf.format
 			//Thread.sleep(1000);
 			//File dest=new File("C:\\Users\\Usha\\OneDrive\\Documents\\New folder\\Test Math.random().jpeg");
 			FileHandler.copy(src, dest);
-//	
-//		
+	
+		
+}
 	}
 
 
 
-	
-		
-		
-		
-	
 
 	
-	
-public static String getDataFromExcel(String sheet,int row,int column) throws EncryptedDocumentException, IOException  {
-		String path="C:\\All JAVA files\\Asha\\Rani.xlsx";
-		FileInputStream file=new FileInputStream(path);
-		String Data=WorkbookFactory.create(file).getSheet("Asha").getRow(1).getCell(0).getStringCellValue();
-return Data;
-}
-		}
+
+		
+		
+
+
 //
 //		
 //	}

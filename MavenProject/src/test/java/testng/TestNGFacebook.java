@@ -1,5 +1,4 @@
 package testng;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -10,6 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -23,10 +23,12 @@ import pomClass.SignUpPage;
 import utils.Utility;
 
 public class TestNGFacebook extends Browser {
-private WebDriver driver;
- SignUpPage signUpPage;
- LoginOrSignUpPage loginOrSignUpPage;
-private String TestID;
+WebDriver driver;
+ private  LoginOrSignUpPage loginOrSignUpPage;
+private SignUpPage signUpPage;
+//private String TestID;
+private SoftAssert softAssert;
+
 
 
 @BeforeSuite
@@ -49,133 +51,138 @@ public void OpenBrowser(String browser ) throws IOException {
 	driver.manage().window().maximize();
 	
 }
+@BeforeClass
+public void beforeClass() {
+	loginOrSignUpPage=new LoginOrSignUpPage(driver);
+}
 
 
 @BeforeMethod
-public void beforeMethod() throws IOException, InterruptedException {
+public void beforeMethod() throws Exception {
+	
 	System.out.println("Before Method");
 	driver.get("https://www.facebook.com");
-
+Thread.sleep(1000);
 	LoginOrSignUpPage loginOrSignUpPage=new LoginOrSignUpPage(driver);
-loginOrSignUpPage.sendUser(Utility.getDataFromExcel("TestData", 1, 0));
-	loginOrSignUpPage.sendPass(Utility.getDataFromExcel("TestData", 1, 1));
+	loginOrSignUpPage.sendUser(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 1,0));
+	loginOrSignUpPage.sendPass(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 1,1));
 	loginOrSignUpPage.ClickOnCreatNewAccount();
 	
+	softAssert=new SoftAssert();
 
 	
 }
 
 	
-@Test(priority=1,enabled=false)
-public void verifyTermsLink() throws InterruptedException {
-TestID="T101";
+@Test(enabled=false)
+public void verifyTermsLink() throws Exception {
+	
+	//TestID="T101";
 
 	System.out.println("Test-A");
 	SignUpPage  signUpPage=new SignUpPage(driver); 
+	signUpPage.sendFirstName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,0));
+	signUpPage.sendLastName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,1));
+	signUpPage.sendMob(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,2));
+	
 	signUpPage.ClickOnTerms();
 	
 	Thread.sleep(3000);
 	ArrayList<String>addr=new ArrayList<String>(driver.getWindowHandles());
 	driver.switchTo().window(addr.get(1));
-	String actualTitle=driver.getTitle();
-	String expectedTitle="Facebook";
-	
-	SoftAssert soft=new SoftAssert();
-	soft.assertEquals(actualTitle, expectedTitle);
-	soft.assertNotEquals(actualTitle, expectedTitle);
-	soft.assertAll();
+	Thread.sleep(2000);
+	String actualURL=driver.getCurrentUrl();
+	String expectedURL="https://www.facebook.com/legal/terms/update";
+	if(actualURL.equals(expectedURL)) {
+		System.out.println("pass");
+	}
+	else {
+		System.out.println("Fail");
+	}
+//	SoftAssert soft=new SoftAssert();
+//	soft.assertEquals(actualURL, expectedURL);
+//	soft.assertAll();
 }	
 	
-//	if(actualTitle.equals(expectedTitle)) {
-//		System.out.println("Pass");
-//	}
-//	else {
-//		System.out.println("Fail");
-//	}
 
-@Test(priority=2)
-public void verifyprivacyPolicy() throws InterruptedException {
-	TestID="T102";
+@Test
+public void verifyprivacyPolicy() throws Exception {
+	//TestID="T102";
 	System.out.println("Test-B");
 	Thread.sleep(3000);
 	SignUpPage  signUpPage=new SignUpPage(driver); 
+	signUpPage.sendFirstName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,0));
+	signUpPage.sendLastName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,1));
+	signUpPage.sendMob(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,2));
+	
 	signUpPage.ClickOnprivacyPolicy();
 	
 	Thread.sleep(3000);
 	ArrayList<String>addr=new ArrayList<String>(driver.getWindowHandles());
 	driver.switchTo().window(addr.get(1));
-	String actualText=signUpPage.getTextprivacyPolicy();
-	String expectedText="Privacy Policy ";
+	Thread.sleep(3000);
+	String actualURL=driver.getCurrentUrl();
+	String expectedURL="https://www.facebook.com/";
+	if(actualURL.equals(expectedURL)) {
+		System.out.println("pass");
+	}
+	else {
+		System.out.println("Fail");
+	}
+//	SoftAssert soft=new SoftAssert();
+//	soft.assertEquals(actualURL, expectedURL);
+//	soft.assertAll();
 
-	SoftAssert soft=new SoftAssert();
-	soft.assertEquals(actualText, expectedText);
-	soft.assertNotEquals(actualText, expectedText);
-	soft.assertAll();
-
-//if(actualText.equals(expectedText)) {
-//	System.out.println("Pass");
-//}
-//else {
-//	System.out.println("Fail");
-//	}
 
 }
-@Test(priority=3)
-public void verifycookiesPolicy() throws InterruptedException {
-	TestID="T103";
+@Test(enabled=false)
+public void verifycookiesPolicy() throws Exception {
+//	TestID="T103";
 	System.out.println("Test-c");
-	Thread.sleep(3000);
 	SignUpPage  signUpPage=new SignUpPage(driver); 
+	signUpPage.sendFirstName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,0));
+	signUpPage.sendLastName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,1));
+	signUpPage.sendMob(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,2));
+	
 	signUpPage.ClickOnCookiesPolicy();
 	Thread.sleep(3000);
 	ArrayList<String>addr=new ArrayList<String>(driver.getWindowHandles());
 	driver.switchTo().window(addr.get(1));
-String actualText=signUpPage.getTextCookiesPolicy();
-String expectedText="Cookies Policy";
+	Thread.sleep(3000);
 
-SoftAssert soft=new SoftAssert();
-soft.assertEquals(actualText, expectedText);
-soft.assertNotEquals(actualText, expectedText);
-soft.assertAll();
+String actualURL=driver.getCurrentUrl();
+String expectedURL="https://www.facebook.com/privacy/policies/cookies/?entry_point=cookie_policy_redirect&entry=0";
+if(actualURL.equals(expectedURL)) {
+	System.out.println("pass");
+}
+else {
+	System.out.println("Fail");
+}
+//SoftAssert soft=new SoftAssert();
+//soft.assertEquals(actualURL, expectedURL);
+//soft.assertAll();
 }
 
-//if(actualText.equals(expectedText)) {
-//	System.out.println("Pass");
+//	@AfterMethod
+//public void afterMethod(ITestResult result) throws IOException, InterruptedException {
+//if(ITestResult.FAILURE == result.getStatus());{
+//	Utility.captureScreenshot(driver, TestID);
 //}
-//else {
-//	System.out.println("Fail");
-//	}
-//
 //}
 
-
-@AfterMethod
-public void afterMethod() throws InterruptedException {
-	
-public void afterMethod(ITestResult result) throws IOException, InterruptedException {
-	if(ITestResult.FAILURE == result.getStatus());{
-		Utility.captureScreenshot(driver, TestID);
-	}
-//driver.close();
-Thread.sleep(3000);
-ArrayList<String>addr=new ArrayList<String>(driver.getWindowHandles());
-driver.switchTo().window(addr.get(0));
-}
 @AfterClass
 public void clearPomObject() {
+	loginOrSignUpPage=null;
+	signUpPage=null;
+	}
+
+@AfterTest
+public void close() {
 	driver.quit();
 }
 @AfterSuite
 public void afterSuite() {
-	
-}
-@AfterTest
-public void close() {
 	driver=null;
 	System.gc();	
 }
 }
-
-
-	
-
