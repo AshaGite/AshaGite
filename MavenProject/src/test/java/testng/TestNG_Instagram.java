@@ -1,5 +1,5 @@
 package testng;
-
+		//Asha Gite
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -35,8 +35,6 @@ public class TestNG_Instagram extends Browser {
 	
 		WebDriver driver;
 		private SignUp signUp;
-		//private String TestID;
-
 		
 
 		private SoftAssert softAssert;
