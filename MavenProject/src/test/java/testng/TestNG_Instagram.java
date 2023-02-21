@@ -33,7 +33,7 @@ import Instagram.SignUp;
 import Instagram.Terms;
 import browser.Browser;
 import utils.Utility;
-
+///////////////Ashaaaaaaaaaaaaaaaa
 public class TestNG_Instagram extends Browser {
 
 	
