@@ -20,7 +20,7 @@ public class Utility {
 	WebDriver driver;
 	
 	public static String getDataFromExcel(String path,String sheet,int row,int cell) throws Exception  {
-		//String path="C:\\All JAVA files\\Asha\\Rani.xlsx";
+		//String path="src//test/resources//TestData//ProjectTestData.xlsx";
 	double data1;
 	String data;
 	long data2;
@@ -39,7 +39,7 @@ public class Utility {
 		}
 	}
 
-public static void captureScreenshot( WebDriver driver , String TestId) throws IOException, InterruptedException {
+public static void takeScreenshot( WebDriver driver , int TestId)throws IOException {
 			
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH-mm-ss");  
 			TakesScreenshot t=(TakesScreenshot)driver;
@@ -47,13 +47,16 @@ public static void captureScreenshot( WebDriver driver , String TestId) throws I
 			File src=t.getScreenshotAs(OutputType.FILE);
 			LocalDateTime now = LocalDateTime.now();  
 
-File dest=new File("C:\\Users\\Usha\\OneDrive\\Documents\\ASHA\\test"+dtf.format(now) +"Test_VerifyPolicy.jpeg");
+File dest=new File("test-output/Screenshot/imagesName/"+dtf.format(now) +"Testss1.jpeg");
 			//Thread.sleep(1000);
 			//File dest=new File("C:\\Users\\Usha\\OneDrive\\Documents\\New folder\\Test Math.random().jpeg");
 			FileHandler.copy(src, dest);
 	
 		
 }
+
+
+
 	}
 
 

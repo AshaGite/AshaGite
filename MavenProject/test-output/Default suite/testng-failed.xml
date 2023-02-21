@@ -3,18 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testng.TestNGAjio">
+      <class name="testng.TestNgMyTripApp">
         <methods>
-          <include name="afterrTest"/>
-          <include name="verifyKidsGetText"/>
-          <include name="OpenBrowser"/>
-          <include name="close"/>
-          <include name="openUrl"/>
-          <include name="verifyMenText"/>
+          <include name="VerifyMyBooking"/>
           <include name="afterSuite"/>
-          <include name="beforeSuit"/>
+          <include name="afterTest"/>
+          <include name="OpenURL"/>
+          <include name="OpenBrowser"/>
+          <include name="OpenBrowser"/>
+          <include name="VerifySignInPage"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- testng.TestNGAjio -->
+      </class> <!-- testng.TestNgMyTripApp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

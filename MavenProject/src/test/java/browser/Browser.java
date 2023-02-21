@@ -8,19 +8,19 @@ import org.openqa.selenium.opera.OperaDriver;
 public class Browser {
 	
 public static WebDriver openChromeBrwser() {
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Usha\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\browserFiles\\chromedriver.exe");
 	WebDriver driver=new ChromeDriver();
 	return driver;	
 	}
 
 public static WebDriver openFirefoxBrwser() {
-	System.setProperty("webdriver.gecko.driver", "C:\\geckodriver-v0.32.1-win32\\geckodriver.exe");
+	System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\browserFiles\\geckodriver.exe");
 	WebDriver driver=new FirefoxDriver();
 	return driver;	
 	}
 
 public static WebDriver openOperaBrwser() {
-	System.setProperty("webdriver.opera.driver", "C:\\All JAVA files\\operadriver_win32\\operadriver.exe");
+	System.setProperty("webdriver.opera.driver", "src\\test\\resources\\browserFiles\\operadriver.exe");
 	WebDriver driver=new OperaDriver();
 	return driver;	
 	}

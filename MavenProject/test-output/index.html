@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,26 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testng.TestNGClassSNDTUniversity" class="method navigator-link" hash-for-method="verifyURLOnStudent">verifyURLOnStudent</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testng.TestNGClassSNDTUniversity" class="method navigator-link" hash-for-method="verifyURLOnStudentName">verifyURLOnStudentName</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -123,7 +104,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testng.TestNGClassSNDTUniversity" class="method navigator-link" hash-for-method="getTextStudentName">getTextStudentName</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testng.TestNgMyTripApp" class="method navigator-link" hash-for-method="VerifyMyBooking">VerifyMyBooking</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.TestNgMyTripApp" class="method navigator-link" hash-for-method="VerifySignInPage">VerifySignInPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -138,55 +124,24 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testng.TestNGClassSNDTUniversity</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyURLOnStudent">
-                  </a> <!-- verifyURLOnStudent -->
-                  <span class="method-name">verifyURLOnStudent</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	expected [https://sndt.ac.in/] but found [https://sndt.ac.in/index.php/students-sndt]
-	at testng.TestNGClassSNDTUniversity.verifyURLOnStudent(TestNGClassSNDTUniversity.java:76)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1589)
-... Removed 12 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyURLOnStudentName">
-                  </a> <!-- verifyURLOnStudentName -->
-                  <span class="method-name">verifyURLOnStudentName</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	expected [https://sndt.ac.in/notable-alumni/anita-dongre] but found [https://sndt.ac.in/index.php/notable-alumni/anita-dongre]
-	at testng.TestNGClassSNDTUniversity.verifyURLOnStudentName(TestNGClassSNDTUniversity.java:112)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1589)
-... Removed 12 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testng.TestNGClassSNDTUniversity</span>
+              <span class="class-name">testng.TestNgMyTripApp</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="getTextStudentName">
-                  </a> <!-- getTextStudentName -->
-                  <span class="method-name">getTextStudentName</span>
+                  <a name="VerifyMyBooking">
+                  </a> <!-- VerifyMyBooking -->
+                  <span class="method-name">VerifyMyBooking</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifySignInPage">
+                  </a> <!-- VerifySignInPage -->
+                  <span class="method-name">VerifySignInPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -201,10 +156,13 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;extendReport.ExtentTestNGIReporterListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;ChromeTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testng.TestNGClassSNDTUniversity&quot;/&gt;
+      &lt;class name=&quot;testng.TestNgMyTripApp&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ChromeTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -244,24 +202,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyURLOnStudent')
-data.setCell(0, 2, 'testng.TestNGClassSNDTUniversity')
-data.setCell(0, 3, 11382);
+data.setCell(0, 1, 'VerifySignInPage')
+data.setCell(0, 2, 'testng.TestNgMyTripApp')
+data.setCell(0, 3, 16689);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'getTextStudentName')
-data.setCell(1, 2, 'testng.TestNGClassSNDTUniversity')
-data.setCell(1, 3, 7144);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyURLOnStudentName')
-data.setCell(2, 2, 'testng.TestNGClassSNDTUniversity')
-data.setCell(2, 3, 6317);
+data.setCell(1, 1, 'VerifyMyBooking')
+data.setCell(1, 2, 'testng.TestNgMyTripApp')
+data.setCell(1, 3, 110);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -287,70 +241,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testng.TestNGClassSNDTUniversity</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">browserSuite</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
+              <div class="chronological-class-name">testng.TestNgMyTripApp</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">openBrowser(Chrome)</span>
-                <span class="method-start">14 ms</span>
+                <span class="method-name">OpenBrowser(Chrome)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">OpenBrowser</span>
-                <span class="method-start">1838 ms</span>
+                <span class="method-start">2088 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">openLink</span>
-                <span class="method-start">2113 ms</span>
+                <span class="method-name">OpenURL</span>
+                <span class="method-start">2178 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyURLOnStudent</span>
-                <span class="method-start">7237 ms</span>
+                <span class="method-name">VerifyMyBooking</span>
+                <span class="method-start">9450 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeed</span>
-                <span class="method-start">18644 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">openLink</span>
-                <span class="method-start">20678 ms</span>
+                <span class="method-name">OpenURL</span>
+                <span class="method-start">9572 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyURLOnStudentName</span>
-                <span class="method-start">22038 ms</span>
+                <span class="method-name">VerifySignInPage</span>
+                <span class="method-start">11576 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeed</span>
-                <span class="method-start">28355 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">openLink</span>
-                <span class="method-start">30376 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">getTextStudentName</span>
-                <span class="method-start">31624 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeed</span>
-                <span class="method-start">38768 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
-                <span class="method-name">CloseAllTab</span>
-                <span class="method-start">40804 ms</span>
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">28274 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">41225 ms</span>
+                <span class="method-start">28276 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
-                <span class="method-name">afterSuit</span>
-                <span class="method-start">41393 ms</span>
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">28382 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

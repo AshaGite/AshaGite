@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-18T12:39:35 IST" name="Suite" finished-at="2023-02-18T12:40:16 IST" duration-ms="41214">
+  <suite started-at="2023-02-21T12:49:08 IST" name="Suite" finished-at="2023-02-21T12:49:36 IST" duration-ms="28308">
     <groups>
     </groups>
-    <test started-at="2023-02-18T12:39:35 IST" name="ChromeTest" finished-at="2023-02-18T12:40:16 IST" duration-ms="41214">
-      <class name="testng.TestNGClassSNDTUniversity">
-        <test-method is-config="true" signature="browserSuite()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:39:35 IST" name="browserSuite" finished-at="2023-02-18T12:39:35 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSuite -->
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:39:35 IST" name="openBrowser" finished-at="2023-02-18T12:39:37 IST" duration-ms="1794" status="PASS">
+    <test started-at="2023-02-21T12:49:08 IST" name="ChromeTest" finished-at="2023-02-21T12:49:36 IST" duration-ms="28308">
+      <class name="testng.TestNgMyTripApp">
+        <test-method is-config="true" signature="OpenBrowser(java.lang.String)[pri:0, instance:testng.TestNgMyTripApp@43195e57]" started-at="2023-02-21T12:49:08 IST" name="OpenBrowser" finished-at="2023-02-21T12:49:10 IST" duration-ms="2040" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,114 +17,40 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:39:37 IST" name="OpenBrowser" finished-at="2023-02-18T12:39:37 IST" duration-ms="258" status="PASS">
+        </test-method> <!-- OpenBrowser -->
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:testng.TestNgMyTripApp@43195e57]" started-at="2023-02-21T12:49:10 IST" name="OpenBrowser" finished-at="2023-02-21T12:49:10 IST" duration-ms="82" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowser -->
-        <test-method is-config="true" signature="openLink()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:39:37 IST" name="openLink" finished-at="2023-02-18T12:39:42 IST" duration-ms="5123" status="PASS">
+        <test-method is-config="true" signature="OpenURL()[pri:0, instance:testng.TestNgMyTripApp@43195e57]" started-at="2023-02-21T12:49:10 IST" name="OpenURL" finished-at="2023-02-21T12:49:17 IST" duration-ms="7271" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openLink -->
-        <test-method signature="verifyURLOnStudent()[pri:1, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:39:42 IST" name="verifyURLOnStudent" finished-at="2023-02-18T12:39:54 IST" duration-ms="11382" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-expected [https://sndt.ac.in/] but found [https://sndt.ac.in/index.php/students-sndt]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [https://sndt.ac.in/] but found [https://sndt.ac.in/index.php/students-sndt]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at testng.TestNGClassSNDTUniversity.verifyURLOnStudent(TestNGClassSNDTUniversity.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1589)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- OpenURL -->
+        <test-method signature="VerifyMyBooking()[pri:1, instance:testng.TestNgMyTripApp@43195e57]" started-at="2023-02-21T12:49:17 IST" name="VerifyMyBooking" finished-at="2023-02-21T12:49:17 IST" duration-ms="110" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyURLOnStudent -->
-        <test-method is-config="true" signature="closeed()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:39:54 IST" name="closeed" finished-at="2023-02-18T12:39:56 IST" duration-ms="2034" status="PASS">
+        </test-method> <!-- VerifyMyBooking -->
+        <test-method is-config="true" signature="OpenURL()[pri:0, instance:testng.TestNgMyTripApp@43195e57]" started-at="2023-02-21T12:49:17 IST" name="OpenURL" finished-at="2023-02-21T12:49:19 IST" duration-ms="2004" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeed -->
-        <test-method is-config="true" signature="openLink()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:39:56 IST" name="openLink" finished-at="2023-02-18T12:39:57 IST" duration-ms="1360" status="PASS">
+        </test-method> <!-- OpenURL -->
+        <test-method signature="VerifySignInPage()[pri:2, instance:testng.TestNgMyTripApp@43195e57]" started-at="2023-02-21T12:49:19 IST" name="VerifySignInPage" finished-at="2023-02-21T12:49:36 IST" duration-ms="16689" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openLink -->
-        <test-method signature="verifyURLOnStudentName()[pri:2, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:39:57 IST" name="verifyURLOnStudentName" finished-at="2023-02-18T12:40:04 IST" duration-ms="6317" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-expected [https://sndt.ac.in/notable-alumni/anita-dongre] but found [https://sndt.ac.in/index.php/notable-alumni/anita-dongre]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [https://sndt.ac.in/notable-alumni/anita-dongre] but found [https://sndt.ac.in/index.php/notable-alumni/anita-dongre]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-at testng.TestNGClassSNDTUniversity.verifyURLOnStudentName(TestNGClassSNDTUniversity.java:112)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1589)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- VerifySignInPage -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testng.TestNgMyTripApp@43195e57]" started-at="2023-02-21T12:49:36 IST" name="closeBrowser" finished-at="2023-02-21T12:49:36 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyURLOnStudentName -->
-        <test-method is-config="true" signature="closeed()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:40:04 IST" name="closeed" finished-at="2023-02-18T12:40:06 IST" duration-ms="2021" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeed -->
-        <test-method is-config="true" signature="openLink()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:40:06 IST" name="openLink" finished-at="2023-02-18T12:40:07 IST" duration-ms="1248" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openLink -->
-        <test-method signature="getTextStudentName()[pri:3, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:40:07 IST" name="getTextStudentName" finished-at="2023-02-18T12:40:14 IST" duration-ms="7144" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTextStudentName -->
-        <test-method is-config="true" signature="closeed()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:40:14 IST" name="closeed" finished-at="2023-02-18T12:40:16 IST" duration-ms="2035" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeed -->
-        <test-method is-config="true" signature="CloseAllTab()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:40:16 IST" name="CloseAllTab" finished-at="2023-02-18T12:40:16 IST" duration-ms="421" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseAllTab -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:40:16 IST" name="afterTest" finished-at="2023-02-18T12:40:16 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testng.TestNgMyTripApp@43195e57]" started-at="2023-02-21T12:49:36 IST" name="afterTest" finished-at="2023-02-21T12:49:36 IST" duration-ms="25" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuit()[pri:0, instance:testng.TestNGClassSNDTUniversity@5119fb47]" started-at="2023-02-18T12:40:17 IST" name="afterSuit" finished-at="2023-02-18T12:40:17 IST" duration-ms="49" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:testng.TestNgMyTripApp@43195e57]" started-at="2023-02-21T12:49:36 IST" name="afterSuite" finished-at="2023-02-21T12:49:36 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterSuit -->
-      </class> <!-- testng.TestNGClassSNDTUniversity -->
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testng.TestNgMyTripApp -->
     </test> <!-- ChromeTest -->
   </suite> <!-- Suite -->
 </testng-results>
