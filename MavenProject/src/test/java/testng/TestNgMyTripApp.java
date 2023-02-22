@@ -31,7 +31,7 @@ import browser.Browser;
 import trip.Booking;
 import trip.MYBooking;
 import utils.Utility;
-
+//MyTrips
 
 public class TestNgMyTripApp extends Browser {
 WebDriver driver;
@@ -90,24 +90,23 @@ public void OpenURL(){
 	softAssert=new SoftAssert();
 }
 @Test(priority=1)
-public void VerifyMyBooking() {
-	//TestID="T101";
+public void VerifyMyBooking() throws InterruptedException {
+	TestID="T101";
 	System.out.println("test-A");
 	booking.getTextBooking();
+String actualText=booking.getTextBooking();
+String expectedText="Welcome! Please log in to proceed.";
+Thread.sleep(1000);
 	
-
-	String actualTitle=driver.getTitle();
-	String expectedTitle="Best deals to fly! Save on tickets, fares & airlines | Mytrip";
-	
-	softAssert.assertEquals(actualTitle, expectedTitle);
+	softAssert.assertEquals(actualText, expectedText);
 	softAssert.assertAll();
 }
 
 @Test(priority=2)
 public void VerifySignInPage() throws InterruptedException {
-	//TestID="T102";
+	TestID="T102";
 	System.out.println("test-B");
-	Thread.sleep(1000);
+	Thread.sleep(000);
 	booking.SendEmail();
 	Thread.sleep(3000);
 	booking.ClickOnSignIn();
@@ -127,15 +126,22 @@ public void VerifySignInPage() throws InterruptedException {
 
 }
 
-//@AfterMethod
-//public void afterMethod(ITestResult result) throws IOException, InterruptedException {
-//	if(ITestResult.FAILURE == result.getStatus());
-//		Utility.captureScreenshot(driver, TestID);
-//	}
+@AfterMethod
+public void afterMethod(ITestResult result) throws IOException, InterruptedException {
+	if(ITestResult.FAILURE == result.getStatus());
+	{
+		Utility.takeScreenshot(driver,TestID);
+	}			Thread.sleep(2000);
+	ArrayList<String> addr = new ArrayList<String>(driver.getWindowHandles());
+	driver.switchTo().window(addr.get(0));
+}
 
 @AfterClass
 public void closeBrowser() {
 	System.out.println("After Class");
+	driver.quit();
+	mYBooking=null;
+	booking=null;
 }
 @AfterTest
 public void afterTest() {
