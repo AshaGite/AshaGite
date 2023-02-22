@@ -25,12 +25,12 @@ import browser.Browser;
 import pomClass.LoginOrSignUpPage;
 import pomClass.SignUpPage;
 import utils.Utility;
-
+//Tests Facebook
 public class TestNGFacebook extends Browser {
 WebDriver driver;
  private  LoginOrSignUpPage loginOrSignUpPage;
 private SignUpPage signUpPage;
-//private String TestID;
+private String TestID;
 private SoftAssert softAssert;
 
 static ExtentTest test;
@@ -71,8 +71,8 @@ public void beforeMethod() throws Exception {
 	driver.get("https://www.facebook.com");
 Thread.sleep(1000);
 	LoginOrSignUpPage loginOrSignUpPage=new LoginOrSignUpPage(driver);
-	loginOrSignUpPage.sendUser(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 1,0));
-	loginOrSignUpPage.sendPass(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 1,1));
+	loginOrSignUpPage.sendUser(Utility.getDataFromExcel("src/test/resources/TestData/ProjectTestData/Rani.xlsx", "Asha", 1,0));
+	loginOrSignUpPage.sendPass(Utility.getDataFromExcel("src/test/resources/TestData/ProjectTestData/Rani.xlsx", "Asha", 1,1));
 	loginOrSignUpPage.ClickOnCreatNewAccount();
 	
 	softAssert=new SoftAssert();
@@ -84,13 +84,13 @@ Thread.sleep(1000);
 @Test
 public void verifyTermsLink() throws Exception {
 	
-	//TestID="T101";
+	TestID="T101";
 
 	System.out.println("Test-A");
 	SignUpPage  signUpPage=new SignUpPage(driver); 
-	signUpPage.sendFirstName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,0));
-	signUpPage.sendLastName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,1));
-	signUpPage.sendMob(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,2));
+	signUpPage.sendFirstName(Utility.getDataFromExcel("src//test//resources//TestData//ProjectTestData//Rani.xlsx", "Asha", 1,0));
+	signUpPage.sendLastName(Utility.getDataFromExcel("src//test//resources//TestData//ProjectTestData//Rani.xlsx", "Asha", 1,2));
+	signUpPage.sendMob(Utility.getDataFromExcel("src//test//resources//TestData//ProjectTestData//Rani.xlsx", "Asha", 1,1));
 	
 	signUpPage.ClickOnTerms();
 	
@@ -99,7 +99,7 @@ public void verifyTermsLink() throws Exception {
 	driver.switchTo().window(addr.get(1));
 	Thread.sleep(2000);
 	String actualURL=driver.getCurrentUrl();
-	String expectedURL="https://www.facebook.com/legal/terms/update";
+	String expectedURL="https://www.facebook.com/legal/terms/update1234";
 //	if(actualURL.equals(expectedURL)) {
 //		System.out.println("pass");
 //	}
@@ -113,13 +113,13 @@ public void verifyTermsLink() throws Exception {
 
 @Test
 public void verifyprivacyPolicy() throws Exception {
-	//TestID="T102";
+	TestID="T102";
 	System.out.println("Test-B");
 	Thread.sleep(3000);
 	SignUpPage  signUpPage=new SignUpPage(driver); 
-	signUpPage.sendFirstName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,0));
-	signUpPage.sendLastName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,1));
-	signUpPage.sendMob(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,2));
+	signUpPage.sendFirstName(Utility.getDataFromExcel("src//test//resources//TestData//ProjectTestData//Rani.xlsx", "Asha", 1,0));
+	signUpPage.sendLastName(Utility.getDataFromExcel("src//test//resources//TestData//ProjectTestData//Rani.xlsx", "Asha", 1,2));
+	signUpPage.sendMob(Utility.getDataFromExcel("src//test//resources//TestData//ProjectTestData//Rani.xlsx", "Asha", 1,1));
 	
 	signUpPage.ClickOnprivacyPolicy();
 	
@@ -143,12 +143,12 @@ public void verifyprivacyPolicy() throws Exception {
 @Test
 
 public void verifycookiesPolicy() throws Exception {
-//	TestID="T103";
+	TestID="T103";
 	System.out.println("Test-c");
 	SignUpPage  signUpPage=new SignUpPage(driver); 
-	signUpPage.sendFirstName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,0));
-	signUpPage.sendLastName(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,1));
-	signUpPage.sendMob(Utility.getDataFromExcel("C:\\All JAVA files\\Asha\\Book1.xlsx", "Asha", 4,2));
+	signUpPage.sendFirstName(Utility.getDataFromExcel("src//test//resources//TestData//ProjectTestData//Rani.xlsx", "Asha", 1,0));
+	signUpPage.sendLastName(Utility.getDataFromExcel("src//test//resources//TestData//ProjectTestData//Rani.xlsx", "Asha", 1,2));
+	signUpPage.sendMob(Utility.getDataFromExcel("src//test//resources//TestData//ProjectTestData//Rani.xlsx", "Asha", 1,1));
 	
 	signUpPage.ClickOnCookiesPolicy();
 	Thread.sleep(3000);
@@ -169,12 +169,12 @@ softAssert.assertNotEquals(actualURL, expectedURL);
 softAssert.assertAll();
 }
 
-//	@AfterMethod
-//public void afterMethod(ITestResult result) throws IOException, InterruptedException {
-//if(ITestResult.FAILURE == result.getStatus());{
-//	Utility.captureScreenshot(driver, TestID);
-//}
-//}
+	@AfterMethod
+public void afterMethod(ITestResult result) throws IOException, InterruptedException {
+if(ITestResult.FAILURE == result.getStatus());{
+	Utility.takeScreenshot(driver,TestID);
+}
+}
 
 @AfterClass
 public void clearPomObject() {
