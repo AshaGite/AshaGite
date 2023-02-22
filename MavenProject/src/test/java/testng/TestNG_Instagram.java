@@ -1,5 +1,5 @@
 package testng;
-		//Asha Gite
+		//Asha Gitesssss
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -33,14 +33,12 @@ import Instagram.SignUp;
 import Instagram.Terms;
 import browser.Browser;
 import utils.Utility;
-///////////////Ashaaaaaaaaaaaaaaaai
 public class TestNG_Instagram extends Browser {
 
 	
 		WebDriver driver;
 		private SignUp signUp;
-	
-		int TestID;
+	private String TestID;
 
 		private SoftAssert softAssert;
 
@@ -96,7 +94,7 @@ public void openURl() {
 	
 	@Test
 public void VeriyfyTerms() throws InterruptedException {
-		TestID=100;
+		TestID="T100";
 
 		System.out.println("test-A");
 		Thread.sleep(3000);
@@ -126,7 +124,7 @@ public void VeriyfyTerms() throws InterruptedException {
 	@Test(enabled=false)
 	
 	public void VeriyfyPrivacyPolicy() throws InterruptedException {
-		TestID=101;
+		TestID="T101";
 
 		System.out.println("test-B");
 		Thread.sleep(5000);
@@ -153,7 +151,7 @@ public void VeriyfyTerms() throws InterruptedException {
 	
 	@Test (enabled=false)
 	public void VerifyCookiesPolicy() throws InterruptedException {
-		TestID=103;
+		TestID="T103";
 
 		CookiesPolicy cookiesPolicy=new CookiesPolicy(driver);
 		Thread.sleep(3000);
@@ -176,8 +174,10 @@ public void VeriyfyTerms() throws InterruptedException {
 	}
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws IOException, InterruptedException {
-	if(ITestResult.FAILURE == result.getStatus());{
-		Utility.takeScreenshot(driver, TestID);	}
+		if(ITestResult.FAILURE == result.getStatus());
+		{
+			Utility.takeScreenshot(driver,TestID);
+		}
 	}
 	@AfterClass
 	public void afterClass() {
