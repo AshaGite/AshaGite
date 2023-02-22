@@ -30,7 +30,7 @@ import SNDTUniversity.Name;
 import SNDTUniversity.Name212;
 import browser.Browser;
 import utils.Utility;
-////SNDT University
+////SNDT University1
 public class TestNGClassSNDTUniversity extends Browser {
 	private WebDriver driver;
 	private HomePage homePage;
