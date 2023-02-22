@@ -1,5 +1,5 @@
 package testng;
-
+		//Asha Gite
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,33 +23,36 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import Instagram.CookiesPolicy;
 import Instagram.PrivacyPolicy;
 import Instagram.SignUp;
 import Instagram.Terms;
 import browser.Browser;
 import utils.Utility;
-
+///////////////Ashaaaaaaaaaaaaaaaai
 public class TestNG_Instagram extends Browser {
 
 	
 		WebDriver driver;
 		private SignUp signUp;
-		//private String TestID;
-
-		
+	
+		int TestID;
 
 		private SoftAssert softAssert;
 
-		@BeforeSuite
-		public void beforeSuit() {
-			System.out.println("Before Suite");
-		}
-		
-		
-		@Parameters("browser")
+		static ExtentTest test;
+		static ExtentHtmlReporter reporter;
 		@BeforeTest
-		public void OpenBrowser(String browserName) {
+		@Parameters("browser")
+		public void OpenBrowser(String browserName) throws Exception {
+			reporter = new ExtentHtmlReporter("test-output/ExtendReport/Extent.html");
+			ExtentReports extend = new ExtentReports();
+			extend.attachReporter(reporter);
+//		public void OpenBrowser(String browserName) {
 			if(browserName.equals("Chrome")) {
 				driver=openChromeBrwser();
 			//driver=Browser.openChromeBrwser();	
@@ -93,7 +96,7 @@ public void openURl() {
 	
 	@Test
 public void VeriyfyTerms() throws InterruptedException {
-		//TestID="T101";
+		TestID=100;
 
 		System.out.println("test-A");
 		Thread.sleep(3000);
@@ -112,17 +115,18 @@ public void VeriyfyTerms() throws InterruptedException {
 		String expectedURL="https://www.instagram.com/accounts/emailsignup/";
 		String expectedTitle="Sign up • Instagram";
 		//softAssert=new SoftAssert();
-		
-		softAssert.assertEquals(actualURL, expectedURL);
-		softAssert.assertEquals(actualTitle, expectedTitle);
-		softAssert.assertAll();
+		Assert.assertEquals(actualURL, expectedURL, "URL is not matched");// Hard assert
+
+//		softAssert.assertEquals(actualURL, expectedURL);
+//		softAssert.assertEquals(actualTitle, expectedTitle);
+//		softAssert.assertAll();
 	}
 		//Thread.sleep(1000);
 
-	@Test
+	@Test(enabled=false)
 	
 	public void VeriyfyPrivacyPolicy() throws InterruptedException {
-		//TestID="T102";
+		TestID=101;
 
 		System.out.println("test-B");
 		Thread.sleep(5000);
@@ -138,17 +142,18 @@ public void VeriyfyTerms() throws InterruptedException {
 			
 			String expectedURL="https://www.instagram.com/accounts/emailsignup/";
 		String expectedTitle="Sign up • Instagram";
-			//softAssert=new SoftAssert();
+		Assert.assertEquals(actualURL, expectedURL, "URL is not matched");// Hard assert
+
 //			
-			softAssert.assertEquals(actualURL, expectedURL);
-			softAssert.assertEquals(actualTitle, expectedTitle);
-			softAssert.assertAll();
+//			softAssert.assertEquals(actualURL, expectedURL);
+//			softAssert.assertEquals(actualTitle, expectedTitle);
+//			softAssert.assertAll();
 	}
 			
 	
-	@Test 
+	@Test (enabled=false)
 	public void VerifyCookiesPolicy() throws InterruptedException {
-		//TestID="T103";
+		TestID=103;
 
 		CookiesPolicy cookiesPolicy=new CookiesPolicy(driver);
 		Thread.sleep(3000);
@@ -163,17 +168,17 @@ public void VeriyfyTerms() throws InterruptedException {
 		String expectedTitle="Sign up • Instagram";
 		ArrayList<String> addr = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(addr.get(1));
-					
+		//Assert.assertEquals(actualURL, expectedURL, "URL is not matched");// Hard assert
+				
 	softAssert.assertEquals(actualURL, expectedURL);
 	softAssert.assertEquals(actualTitle, expectedTitle);
 	softAssert.assertAll();
 	}
-//	@AfterMethod
-//	public void afterMethod(ITestResult result) throws IOException, InterruptedException {
-//	if(ITestResult.FAILURE == result.getStatus());{
-//		Utility.captureScreenshot(driver, TestID);
-//	}
-//	}
+	@AfterMethod
+	public void afterMethod(ITestResult result) throws IOException, InterruptedException {
+	if(ITestResult.FAILURE == result.getStatus());{
+		Utility.takeScreenshot(driver, TestID);	}
+	}
 	@AfterClass
 	public void afterClass() {
 		signUp=null;
@@ -182,14 +187,15 @@ public void VeriyfyTerms() throws InterruptedException {
 @AfterTest
 	public void afterTest() {
 		System.out.println("After Test-TestNGClass");
-driver.quit();	
+driver.quit();
+driver=null;
+System.gc();
 }
 	@AfterSuite
 	public void afterSuit() {
 		System.out.println("After Suit-TestNGClass");
-		driver=null;
-		System.gc();
-		//driver.quit();
+		
+		
 	}
 }
 

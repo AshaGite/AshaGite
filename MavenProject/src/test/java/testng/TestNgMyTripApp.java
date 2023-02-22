@@ -23,6 +23,10 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import browser.Browser;
 import trip.Booking;
 import trip.MYBooking;
@@ -31,16 +35,22 @@ import utils.Utility;
 
 public class TestNgMyTripApp extends Browser {
 WebDriver driver;
+private MYBooking mYBooking;
+private Booking booking;
+
 private SoftAssert softAssert;
 private String TestID;
-@BeforeSuite
-public void beforeSuite() {
-System.out.println("Before Suite");
-}
-@Parameters("browser")
+static ExtentTest test;
+static ExtentHtmlReporter reporter;
 
 @BeforeTest
-public void OpenBrowser(String browser) {
+
+@Parameters("browser")
+
+public void OpenBrowser(String browser) throws Exception {
+	reporter = new ExtentHtmlReporter("test-output/ExtendReport/Extent.html");
+	ExtentReports extend = new ExtentReports();
+	extend.attachReporter(reporter);
 	if(browser.equals("Chrome")) {
 	driver=openChromeBrwser();
 	}
@@ -58,54 +68,45 @@ public void OpenBrowser(String browser) {
 	driver.manage().window().maximize();
 }
 
-/*@BeforeClass
+@BeforeClass
 public void OpenBrowser(){
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Usha\\Downloads\\chromedriver_win32/chromedriver.exe");
-	driver=new ChromeDriver();	
-driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-*///}
+	 softAssert=new SoftAssert();
+mYBooking=new MYBooking(driver);
+booking=new Booking(driver);
+
+
+			
+}
 
 @BeforeMethod
 public void OpenURL(){
 	System.out.println("Before Method");
 	driver.get("https://www.mytrip.com/");
-	MYBooking mYBooking=new MYBooking(driver);
+	 mYBooking=new MYBooking(driver);
 	mYBooking.ClearCookies();
 	mYBooking.ClickOnBooking();
+	booking=new Booking(driver);
+
 	softAssert=new SoftAssert();
 }
 @Test(priority=1)
 public void VerifyMyBooking() {
-	TestID="T101";
+	//TestID="T101";
 	System.out.println("test-A");
-	Booking booking=new Booking(driver);
 	booking.getTextBooking();
 	
-//String actualURL=driver.getCurrentUrl();
-	/*String expectedURL="https://www.mytrip.com/rf/order-login";
-	
-	String actualText=booking.getTextBooking();
-	*///String expectedText="My Bookings";
-	
+
 	String actualTitle=driver.getTitle();
 	String expectedTitle="Best deals to fly! Save on tickets, fares & airlines | Mytrip";
-	//Assert.assertEquals(actualTitle, expectedTitle);
+	
 	softAssert.assertEquals(actualTitle, expectedTitle);
 	softAssert.assertAll();
-	//Assert.assertEquals(actualTitle, expectedTitle);
-//	if(actualTitle.equals(expectedTitle)) {
-//System.out.println("Pass");	
-//}
-//else {
-//	System.out.println("Fail");
-//}
 }
 
 @Test(priority=2)
 public void VerifySignInPage() throws InterruptedException {
-	TestID="T102";
+	//TestID="T102";
 	System.out.println("test-B");
-	Booking booking=new Booking(driver);
 	Thread.sleep(1000);
 	booking.SendEmail();
 	Thread.sleep(3000);
@@ -119,16 +120,11 @@ public void VerifySignInPage() throws InterruptedException {
 	Thread.sleep(1000);
 	booking.ClickOnLogin();
 	String actualTitle=driver.getTitle();
-	String expectedTitle="Facebook123";
+	String expectedTitle="Facebook";
 	//Assert.assertEquals(actualTitle, expectedTitle);
 	softAssert.assertEquals(actualTitle, expectedTitle);
 	softAssert.assertAll();
-//if(actualTitle.equals(expectedTitle)) {
-//	System.out.println("Pass");
-//}
-//else {
-//	System.out.println("Fail");
-//}
+
 }
 
 //@AfterMethod
@@ -140,11 +136,6 @@ public void VerifySignInPage() throws InterruptedException {
 @AfterClass
 public void closeBrowser() {
 	System.out.println("After Class");
-//driver.quit();
-}
-@AfterSuite
-public void afterSuite() {
-	System.out.println("After suite");
 }
 @AfterTest
 public void afterTest() {
@@ -152,6 +143,11 @@ public void afterTest() {
 	driver=null;
 	System.gc();
 	}
+@AfterSuite
+public void afterSuite() {
+	System.out.println("After suite");
+}
+
 
 
 }

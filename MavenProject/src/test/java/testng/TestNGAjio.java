@@ -28,6 +28,10 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import Ajio.HomePageAjio;
 import browser.Browser;
 import utils.Utility;
@@ -40,16 +44,17 @@ import utils.Utility;
 public class TestNGAjio extends Browser {
  WebDriver driver;
 private SoftAssert softAssert;
-private String TestID;
+private int testID;
 private HomePageAjio homePageAjio;
 
-@BeforeSuite
-public void beforeSuit() {
-	System.out.println("before suit");
-}
-@Parameters("browser")
+static ExtentTest test;
+static ExtentHtmlReporter reporter;
 @BeforeTest
-public void OpenBrowser(String browser ) throws IOException {
+@Parameters("browser")
+public void OpenBrowser(String browser) throws Exception {
+	reporter = new ExtentHtmlReporter("test-output/ExtendReport/Extent.html");
+	ExtentReports extend = new ExtentReports();
+	extend.attachReporter(reporter);
 	if(browser.equals("Chrome")) {
 		driver=openChromeBrwser();
 	}
@@ -84,7 +89,7 @@ public void openUrl() throws IOException {
 }
 @Test
 public void verifyKidsGetText() throws InterruptedException {
-	//TestID="T122";
+	testID=122;
 	System.out.println("Test-A");
 	HomePageAjio homePage=new HomePageAjio(driver);
 
@@ -92,7 +97,7 @@ public void verifyKidsGetText() throws InterruptedException {
 	homePage.clickOnKids();
 	Thread.sleep(3000);
 	String actualURL=driver.getCurrentUrl();
-	String expectedURL="https://www.ajio.com/shop/kids";
+	String expectedURL="https://www.ajio.com/shop/kids1234";
 	softAssert=new SoftAssert();
 	
 	softAssert.assertEquals(actualURL, expectedURL);
@@ -110,7 +115,7 @@ public void verifyKidsGetText() throws InterruptedException {
 }
 @Test()
 public void verifyMenText() {
-	//TestID="T123";
+	testID=123;
 	System.out.println("Test-B");
 //CustomerCarePage customerCarePage=new CustomerCarePage(driver);
 	//HomePageAjio homePage=new HomePageAjio(driver);
@@ -144,30 +149,33 @@ softAssert.assertAll();
 //}
 
 
-//@AfterMethod
-//public void afterMethod(ITestResult result) throws IOException, InterruptedException {
-//if(ITestResult.FAILURE == result.getStatus());
-//	Utility.captureScreenshot(driver, TestID);
-//}
+@AfterMethod
+public void logoutAccount(ITestResult result) throws InterruptedException, IOException {
+	if(ITestResult.FAILURE == result.getStatus())
+	{
+		Utility.takeScreenshot(driver, testID);
+	}
+}
 
 
 
 @AfterClass
 public void close() {
 	System.out.println("after class");
-	//homePageAjio=null;
+	homePageAjio=null;
 	}
 @AfterTest
 public void afterrTest() {
 	System.out.println("After Test-TestNGClass");
 	driver.quit();
+	driver=null;
+	System.gc();
 
 }	
 @AfterSuite
 public void afterSuite() {
 	System.out.println("After Suit-TestNGClass");
-	driver=null;
-	System.gc();
+	
 
 
 	

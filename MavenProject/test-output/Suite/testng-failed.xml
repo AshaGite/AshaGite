@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="1" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="1" parallel="classes" name="ChromeTest(failed)">
-    <parameter name="browser" value="Chrome"/>
+  <listeners>
+    <listener class-name="extendReport.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test thread-count="1" parallel="classes" name="FirefoxTest(failed)">
+    <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="testng.TestNGClassSNDTUniversity">
+      <class name="testng.TestNgMyTripApp">
         <methods>
-          <include name="verifyURLOnStudentName"/>
-          <include name="afterSuit"/>
+          <include name="VerifyMyBooking"/>
+          <include name="afterSuite"/>
           <include name="afterTest"/>
-          <include name="browserSuite"/>
-          <include name="openBrowser"/>
-          <include name="openLink"/>
+          <include name="OpenURL"/>
           <include name="OpenBrowser"/>
-          <include name="CloseAllTab"/>
-          <include name="closeed"/>
-          <include name="verifyURLOnStudent"/>
+          <include name="OpenBrowser"/>
+          <include name="VerifySignInPage"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- testng.TestNGClassSNDTUniversity -->
+      </class> <!-- testng.TestNgMyTripApp -->
     </classes>
-  </test> <!-- ChromeTest(failed) -->
+  </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
