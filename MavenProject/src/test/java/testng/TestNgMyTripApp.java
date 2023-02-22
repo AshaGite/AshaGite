@@ -31,7 +31,7 @@ import browser.Browser;
 import trip.Booking;
 import trip.MYBooking;
 import utils.Utility;
-//MyTrips1
+//MyTrips12
 
 public class TestNgMyTripApp extends Browser {
 WebDriver driver;
