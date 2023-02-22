@@ -1,5 +1,6 @@
 package testng;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -7,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -27,12 +29,13 @@ import SNDTUniversity.HomePage;
 import SNDTUniversity.Name;
 import SNDTUniversity.Name212;
 import browser.Browser;
-
+import utils.Utility;
+////SNDT University
 public class TestNGClassSNDTUniversity extends Browser {
 	private WebDriver driver;
 	private HomePage homePage;
 	private SoftAssert softAssert;
-
+	private String TestID;
 	static ExtentTest test;
 	static ExtentHtmlReporter reporter;
 
@@ -74,7 +77,7 @@ public class TestNGClassSNDTUniversity extends Browser {
 		}
 		@Test(priority=1)
 		public void verifyURLOnStudent() throws InterruptedException{
-			System.out.println("test-1");
+			TestID="T101";
 			Thread.sleep(1000);
 			homePage.ClickOnStudents();
 			Thread.sleep(3000);
@@ -83,32 +86,15 @@ public class TestNGClassSNDTUniversity extends Browser {
 		String expectedURL="https://sndt.ac.in/students-sndt";
 		Thread.sleep(5000);
 
-//		softAssert =new SoftAssert();
 		softAssert.assertEquals(actualURL, expectedURL);
 		softAssert.assertAll();
 		}
-		//if(actualTitle.equals(expectedTitle))
-//			{
-//				System.out.println("PASSED");
-//			}
-//			else
-//			{
-//				System.out.println("FAILED");
-//			}
-
-			
-			
-			/*String actualTitle = driver.getTitle();
-			String expectedTitle = "Twitter Terms of Service";
-			/String actualText= ;
-			*///String expectedText="Sign in to Twitter";
-			
 		
 		
 		@Test(priority=2)
 		public void verifyURLOnStudentName() throws InterruptedException {
-			System.out.println("test-2");
-			Name name=new Name(driver);
+TestID="T102";			
+	Name name=new Name(driver);
 			name.ClickOnStudentsName();
 			
 
@@ -121,29 +107,16 @@ public class TestNGClassSNDTUniversity extends Browser {
 			System.out.println("URL is matched");
 			
 
-		//	softAssert =new SoftAssert();
 
 			softAssert.assertEquals(actualURL, expectedURL);
 			softAssert.assertAll();
 			
 			}
-			//String actualTitle = driver.getTitle();
-			//String expectedTitle = "Students | SNDT Women's University";
 			
-//			if( actualURL.equals(expectedURL))
-//			{
-//				System.out.println("PASSED");
-//			}
-//			
-//			else
-//			{
-//				System.out.println("FAILED");
-//			}
 		
 		@Test(priority=3)
 		public void getTextStudentName() throws InterruptedException {
-			System.out.println("test-3");
-
+			TestID="T103";
 			Name212 name212=new Name212(driver);
 			name212.ClickOnRevati();
 			
@@ -158,18 +131,15 @@ public class TestNGClassSNDTUniversity extends Browser {
 			softAssert.assertAll();
 			
 			}
-			//if(actualURL.equals(expectdURL)) {
-//				System.out.println("Pass");
-//			}
-//			else {
-//				System.out.println("Fail");
-//			}
+			
 		
 		
 		@AfterMethod
-		public void closeed() throws InterruptedException {
-			System.out.println("After Method");
-			Thread.sleep(2000);
+		public void afterMethod(ITestResult result) throws IOException, InterruptedException {
+			if(ITestResult.FAILURE == result.getStatus());
+			{
+				Utility.takeScreenshot(driver,TestID);
+			}			Thread.sleep(2000);
 			ArrayList<String> addr = new ArrayList<String>(driver.getWindowHandles());
 			driver.switchTo().window(addr.get(0));
 		}
