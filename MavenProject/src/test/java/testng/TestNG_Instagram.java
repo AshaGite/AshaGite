@@ -111,11 +111,8 @@ public void VeriyfyTerms() throws InterruptedException {
 		//softAssert=new SoftAssert();
 		Assert.assertEquals(actualURL, expectedURL, "URL is not matched");// Hard assert
 
-//		softAssert.assertEquals(actualURL, expectedURL);
-//		softAssert.assertEquals(actualTitle, expectedTitle);
-//		softAssert.assertAll();
+
 	}
-		//Thread.sleep(1000);
 
 	@Test(enabled=false)
 	

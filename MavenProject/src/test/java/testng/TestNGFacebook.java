@@ -25,7 +25,6 @@ import browser.Browser;
 import pomClass.LoginOrSignUpPage;
 import pomClass.SignUpPage;
 import utils.Utility;
-//Tests Facebook
 public class TestNGFacebook extends Browser {
 WebDriver driver;
  private  LoginOrSignUpPage loginOrSignUpPage;

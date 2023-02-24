@@ -79,11 +79,7 @@ public void openUrl() throws IOException {
 
 
 	
-	//ExcelSheet
-	//String user=Utility.getDataFromExcel("TestData", 1, 0);
-	//short
-	//homePage.sendusername(Utility.getDataFromExcel("TestData", 1, 0));
-}
+	}
 @Test
 public void verifyKidsGetText() throws InterruptedException {
 	testID="T122";
