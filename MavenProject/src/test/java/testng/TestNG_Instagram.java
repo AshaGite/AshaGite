@@ -1,5 +1,5 @@
 package testng;
-		//Asha Gitesssss
+		
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -50,19 +50,15 @@ public class TestNG_Instagram extends Browser {
 			reporter = new ExtentHtmlReporter("test-output/ExtendReport/Extent.html");
 			ExtentReports extend = new ExtentReports();
 			extend.attachReporter(reporter);
-//		public void OpenBrowser(String browserName) {
 			if(browserName.equals("Chrome")) {
 				driver=openChromeBrwser();
-			//driver=Browser.openChromeBrwser();	
 			}
 			if(browserName.equals("Firefox")) {
 				driver=openFirefoxBrwser();
-			//driver=Browser.openFirefoxBrwser();	
 			}
 			if(browserName.equals("Opera")) {
 			driver=openOperaBrwser();
 					
-				//driver=Browser.openOperaBrwser();	
 			}
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
