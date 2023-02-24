@@ -18,6 +18,7 @@ import org.openqa.selenium.io.FileHandler;
 
 public class Utility {
 	WebDriver driver;
+
 	
 	public static String getDataFromExcel(String path,String sheet,int row,int cell) throws Exception  {
 		//String path="src//test/resources//TestData//ProjectTestData.xlsx";
@@ -39,7 +40,7 @@ public class Utility {
 		}
 	}
 
-public static void takeScreenshot( WebDriver driver , int TestId)throws IOException {
+public static void takeScreenshot( WebDriver driver , String TestId)throws IOException {
 			
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH-mm-ss");  
 			TakesScreenshot t=(TakesScreenshot)driver;
@@ -47,7 +48,7 @@ public static void takeScreenshot( WebDriver driver , int TestId)throws IOExcept
 			File src=t.getScreenshotAs(OutputType.FILE);
 			LocalDateTime now = LocalDateTime.now();  
 
-File dest=new File("test-output/Screenshot/imagesName/"+dtf.format(now) +"Testss1.jpeg");
+File dest=new File("test-output/Screenshot/"+dtf.format(now) + " VerifyTestCases.jpeg");
 			//Thread.sleep(1000);
 			//File dest=new File("C:\\Users\\Usha\\OneDrive\\Documents\\New folder\\Test Math.random().jpeg");
 			FileHandler.copy(src, dest);

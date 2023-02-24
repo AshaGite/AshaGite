@@ -36,15 +36,12 @@ import Ajio.HomePageAjio;
 import browser.Browser;
 import utils.Utility;
 
-//import Ajio.CustomerCarePage;
-// Testing this line for new branch
-//Testing this line for new branch
 
 
 public class TestNGAjio extends Browser {
  WebDriver driver;
 private SoftAssert softAssert;
-private int testID;
+private String testID;
 private HomePageAjio homePageAjio;
 
 static ExtentTest test;
@@ -89,7 +86,7 @@ public void openUrl() throws IOException {
 }
 @Test
 public void verifyKidsGetText() throws InterruptedException {
-	testID=122;
+	testID="T122";
 	System.out.println("Test-A");
 	HomePageAjio homePage=new HomePageAjio(driver);
 
@@ -97,7 +94,7 @@ public void verifyKidsGetText() throws InterruptedException {
 	homePage.clickOnKids();
 	Thread.sleep(3000);
 	String actualURL=driver.getCurrentUrl();
-	String expectedURL="https://www.ajio.com/shop/kids1234";
+	String expectedURL="https://www.ajio.com/shop/kids";
 	softAssert=new SoftAssert();
 	
 	softAssert.assertEquals(actualURL, expectedURL);
@@ -115,7 +112,7 @@ public void verifyKidsGetText() throws InterruptedException {
 }
 @Test()
 public void verifyMenText() {
-	testID=123;
+	testID="T123";
 	System.out.println("Test-B");
 //CustomerCarePage customerCarePage=new CustomerCarePage(driver);
 	//HomePageAjio homePage=new HomePageAjio(driver);
@@ -151,9 +148,9 @@ softAssert.assertAll();
 
 @AfterMethod
 public void logoutAccount(ITestResult result) throws InterruptedException, IOException {
-	if(ITestResult.FAILURE == result.getStatus())
+	if(ITestResult.FAILURE == result.getStatus());
 	{
-		Utility.takeScreenshot(driver, testID);
+		Utility.takeScreenshot(driver,testID);
 	}
 }
 

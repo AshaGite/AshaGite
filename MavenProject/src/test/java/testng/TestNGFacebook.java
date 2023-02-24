@@ -171,7 +171,8 @@ softAssert.assertAll();
 
 	@AfterMethod
 public void afterMethod(ITestResult result) throws IOException, InterruptedException {
-if(ITestResult.FAILURE == result.getStatus());{
+if(ITestResult.FAILURE == result.getStatus());
+{
 	Utility.takeScreenshot(driver,TestID);
 }
 }

@@ -14,7 +14,7 @@ private WebDriver driver;
 //@FindBy(xpath="(//span[text()='My Bookings'])[1]")
 //private WebElement myBooking;
 
-@FindBy(xpath="(//span[text()='My Bookings'])[2]")
+@FindBy(xpath="//span[text()='Welcome! Please log in to proceed.']")
 private WebElement getTextBooking;
 
 @FindBy(xpath="//input[@id='email']")

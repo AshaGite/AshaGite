@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>OperaTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 15 13:09:46 IST 2023</td>
+<td>Started on:</td><td>Wed Feb 22 12:34:24 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14545 ms)</td>
+<tr><td>Total time:</td><td>34 seconds (34201 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,25 +75,70 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testng.TestNG_Instagram.OpenLink()'><b>OpenLink</b><br>Test class: testng.TestNG_Instagram</td>
-<td><div><pre>java.io.FileNotFoundException:   (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:158)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:112)
-	at utils.Utility.getDataFromExcel(Utility.java:53)
-	at testng.TestNG_Instagram.OpenLink(TestNG_Instagram.java:89)
+<td title='testng.TestNgMyTripApp.OpenURL()'><b>OpenURL</b><br>Test class: testng.TestNgMyTripApp</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[@type=&apos;button&apos;])[4]&quot;}
+  (Session info: chrome=109.0.5414.120)
+  (Driver info: operadriver=109.0.5414.120 (168eebf2055fd26ca8c71787b7b3f9fe7c90d13d-refs/branch-heads/5414@{#1459}),platform=Windows NT 10.0.22000 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1FUPUEC&apos;, ip: &apos;192.168.122.123&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, browserConnectionEnabled: false, browserName: opera, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54066}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, opera: {operadriverVersion: 109.0.5414.120 (168eebf2055..., userDataDir: C:\Users\Usha\AppData\Local...}, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 109.0.5414.120, webStorageEnabled: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f98c49259acc5c8faca6821d4cfd4c7
+*** Element info: {Using=xpath, value=(//button[@type=&apos;button&apos;])[4]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at trip.MYBooking.ClearCookies(MYBooking.java:23)
+	at testng.TestNgMyTripApp.OpenURL(TestNgMyTripApp.java:86)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1589)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace767527125", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace767527125'><pre>java.io.FileNotFoundException:   (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:158)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:112)
-	at utils.Utility.getDataFromExcel(Utility.java:53)
-	at testng.TestNG_Instagram.OpenLink(TestNG_Instagram.java:89)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace800240762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace800240762'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[@type=&apos;button&apos;])[4]&quot;}
+  (Session info: chrome=109.0.5414.120)
+  (Driver info: operadriver=109.0.5414.120 (168eebf2055fd26ca8c71787b7b3f9fe7c90d13d-refs/branch-heads/5414@{#1459}),platform=Windows NT 10.0.22000 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1FUPUEC&apos;, ip: &apos;192.168.122.123&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, browserConnectionEnabled: false, browserName: opera, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54066}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, opera: {operadriverVersion: 109.0.5414.120 (168eebf2055..., userDataDir: C:\Users\Usha\AppData\Local...}, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 109.0.5414.120, webStorageEnabled: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f98c49259acc5c8faca6821d4cfd4c7
+*** Element info: {Using=xpath, value=(//button[@type=&apos;button&apos;])[4]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at trip.MYBooking.ClearCookies(MYBooking.java:23)
+	at testng.TestNgMyTripApp.OpenURL(TestNgMyTripApp.java:86)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -112,8 +157,8 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1589)
 </pre></div></td>
-<td>8</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
+<td>30</td>
+<td>testng.TestNgMyTripApp@498d318c</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -123,40 +168,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testng.TestNG_Instagram.afterTest()'><b>afterTest</b><br>Test class: testng.TestNG_Instagram</td>
+<td title='testng.TestNgMyTripApp.afterTest()'><b>afterTest</b><br>Test class: testng.TestNgMyTripApp</td>
 <td></td>
-<td>-1676446801</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
+<td>-1677049499</td>
+<td>testng.TestNgMyTripApp@498d318c</td></tr>
 <tr>
-<td title='testng.TestNG_Instagram.afterMethod()'><b>afterMethod</b><br>Test class: testng.TestNG_Instagram</td>
+<td title='testng.TestNgMyTripApp.afterMethod()'><b>afterMethod</b><br>Test class: testng.TestNgMyTripApp</td>
 <td></td>
-<td>-1676446800</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
+<td>-1677049499</td>
+<td>testng.TestNgMyTripApp@498d318c</td></tr>
 <tr>
-<td title='testng.TestNG_Instagram.OpenLink()'><b>OpenLink</b><br>Test class: testng.TestNG_Instagram</td>
+<td title='testng.TestNgMyTripApp.closeBrowser()'><b>closeBrowser</b><br>Test class: testng.TestNgMyTripApp</td>
 <td></td>
-<td>-1676446800</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
-<tr>
-<td title='testng.TestNG_Instagram.afterMethod()'><b>afterMethod</b><br>Test class: testng.TestNG_Instagram</td>
-<td></td>
-<td>-1676446800</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
-<tr>
-<td title='testng.TestNG_Instagram.afterMethod()'><b>afterMethod</b><br>Test class: testng.TestNG_Instagram</td>
-<td></td>
-<td>-1676446800</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
-<tr>
-<td title='testng.TestNG_Instagram.OpenLink()'><b>OpenLink</b><br>Test class: testng.TestNG_Instagram</td>
-<td></td>
-<td>-1676446800</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
-<tr>
-<td title='testng.TestNG_Instagram.CloseAllTab()'><b>CloseAllTab</b><br>Test class: testng.TestNG_Instagram</td>
-<td></td>
-<td>-1676446800</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
+<td>-1677049499</td>
+<td>testng.TestNgMyTripApp@498d318c</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -166,25 +191,70 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testng.TestNG_Instagram.VeriyfyTerms()'><b>VeriyfyTerms</b><br>Test class: testng.TestNG_Instagram</td>
-<td><div><pre>java.io.FileNotFoundException:   (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:158)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:112)
-	at utils.Utility.getDataFromExcel(Utility.java:53)
-	at testng.TestNG_Instagram.OpenLink(TestNG_Instagram.java:89)
+<td title='testng.TestNgMyTripApp.VerifyMyBooking()'><b>VerifyMyBooking</b><br>Test class: testng.TestNgMyTripApp</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[@type=&apos;button&apos;])[4]&quot;}
+  (Session info: chrome=109.0.5414.120)
+  (Driver info: operadriver=109.0.5414.120 (168eebf2055fd26ca8c71787b7b3f9fe7c90d13d-refs/branch-heads/5414@{#1459}),platform=Windows NT 10.0.22000 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1FUPUEC&apos;, ip: &apos;192.168.122.123&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, browserConnectionEnabled: false, browserName: opera, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54066}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, opera: {operadriverVersion: 109.0.5414.120 (168eebf2055..., userDataDir: C:\Users\Usha\AppData\Local...}, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 109.0.5414.120, webStorageEnabled: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f98c49259acc5c8faca6821d4cfd4c7
+*** Element info: {Using=xpath, value=(//button[@type=&apos;button&apos;])[4]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at trip.MYBooking.ClearCookies(MYBooking.java:23)
+	at testng.TestNgMyTripApp.OpenURL(TestNgMyTripApp.java:86)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1589)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace496318836", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace496318836'><pre>java.io.FileNotFoundException:   (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:158)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:112)
-	at utils.Utility.getDataFromExcel(Utility.java:53)
-	at testng.TestNG_Instagram.OpenLink(TestNG_Instagram.java:89)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace833746471", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace833746471'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[@type=&apos;button&apos;])[4]&quot;}
+  (Session info: chrome=109.0.5414.120)
+  (Driver info: operadriver=109.0.5414.120 (168eebf2055fd26ca8c71787b7b3f9fe7c90d13d-refs/branch-heads/5414@{#1459}),platform=Windows NT 10.0.22000 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-1FUPUEC&apos;, ip: &apos;192.168.122.123&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.opera.OperaDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, browserConnectionEnabled: false, browserName: opera, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54066}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, opera: {operadriverVersion: 109.0.5414.120 (168eebf2055..., userDataDir: C:\Users\Usha\AppData\Local...}, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 109.0.5414.120, webStorageEnabled: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f98c49259acc5c8faca6821d4cfd4c7
+*** Element info: {Using=xpath, value=(//button[@type=&apos;button&apos;])[4]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at trip.MYBooking.ClearCookies(MYBooking.java:23)
+	at testng.TestNgMyTripApp.OpenURL(TestNgMyTripApp.java:86)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -204,87 +274,7 @@ function toggleAllBoxes() {
 	at java.base/java.lang.Thread.run(Thread.java:1589)
 </pre></div></td>
 <td>0</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
-<tr>
-<td title='testng.TestNG_Instagram.VerifyCookiesPolicy()'><b>VerifyCookiesPolicy</b><br>Test class: testng.TestNG_Instagram</td>
-<td><div><pre>java.io.FileNotFoundException:   (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:158)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:112)
-	at utils.Utility.getDataFromExcel(Utility.java:53)
-	at testng.TestNG_Instagram.OpenLink(TestNG_Instagram.java:89)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1589)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace263030976", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace263030976'><pre>java.io.FileNotFoundException:   (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:158)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:112)
-	at utils.Utility.getDataFromExcel(Utility.java:53)
-	at testng.TestNG_Instagram.OpenLink(TestNG_Instagram.java:89)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1589)
-</pre></div></td>
-<td>0</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
-<tr>
-<td title='testng.TestNG_Instagram.VeriyfyPrivacyPolicy()'><b>VeriyfyPrivacyPolicy</b><br>Test class: testng.TestNG_Instagram</td>
-<td><div><pre>java.io.FileNotFoundException:   (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:158)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:112)
-	at utils.Utility.getDataFromExcel(Utility.java:53)
-	at testng.TestNG_Instagram.OpenLink(TestNG_Instagram.java:89)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1589)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1790875395", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1790875395'><pre>java.io.FileNotFoundException:   (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:158)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:112)
-	at utils.Utility.getDataFromExcel(Utility.java:53)
-	at testng.TestNG_Instagram.OpenLink(TestNG_Instagram.java:89)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1589)
-</pre></div></td>
-<td>0</td>
-<td>testng.TestNG_Instagram@2ef3eef9</td></tr>
+<td>testng.TestNgMyTripApp@498d318c</td></tr>
 </table><p>
 </body>
 </html>

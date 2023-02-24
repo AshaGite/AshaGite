@@ -4,12 +4,13 @@
   <listeners>
     <listener class-name="extendReport.ExtentTestNGIReporterListener"/>
   </listeners>
-  <test thread-count="1" parallel="classes" name="FirefoxTest(failed)">
-    <parameter name="browser" value="Firefox"/>
+  <test thread-count="1" parallel="classes" name="ChromeTest(failed)">
+    <parameter name="browser" value="Chrome"/>
     <classes>
       <class name="testng.TestNgMyTripApp">
         <methods>
           <include name="VerifyMyBooking"/>
+          <include name="afterMethod"/>
           <include name="afterSuite"/>
           <include name="afterTest"/>
           <include name="OpenURL"/>
@@ -20,5 +21,5 @@
         </methods>
       </class> <!-- testng.TestNgMyTripApp -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

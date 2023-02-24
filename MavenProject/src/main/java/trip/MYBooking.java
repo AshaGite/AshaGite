@@ -14,7 +14,6 @@ private WebElement clearCookies;
 @FindBy(xpath="(//span[text()='My Bookings'])[2]")
 private WebElement myBooking;
 
-private WebElement getTextBooking;
 public MYBooking (WebDriver driver) {
 	PageFactory.initElements(driver, this);
 	this.driver=driver;

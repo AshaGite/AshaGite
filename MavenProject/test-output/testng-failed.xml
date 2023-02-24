@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="1" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="extendReport.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test thread-count="1" parallel="classes" name="ChromeTest(failed)">
+    <parameter name="browser" value="Chrome"/>
     <classes>
       <class name="testng.TestNgMyTripApp">
         <methods>
           <include name="VerifyMyBooking"/>
+          <include name="afterMethod"/>
           <include name="afterSuite"/>
           <include name="afterTest"/>
           <include name="OpenURL"/>
@@ -16,5 +21,5 @@
         </methods>
       </class> <!-- testng.TestNgMyTripApp -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
