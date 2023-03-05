@@ -9,8 +9,12 @@
 <parameter name="browser" value="Chrome"></parameter>
    
       <classes>
-         <class name = "testng.TestNgMyTripApp" />
+         <class name = "testng.ICICIBank" />
       </classes>
    </test> <!--ChromeTest-->
+   
+   
+  
+   
 
 </suite> <!-- Suite -->

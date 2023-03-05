@@ -3,18 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testng.TestNgMyTripApp">
+      <class name="testng.ICICIBank">
         <methods>
-          <include name="VerifyMyBooking"/>
-          <include name="afterSuite"/>
-          <include name="afterTest"/>
-          <include name="OpenURL"/>
-          <include name="OpenBrowser"/>
-          <include name="OpenBrowser"/>
-          <include name="VerifySignInPage"/>
-          <include name="closeBrowser"/>
+          <include name="OpenUrl"/>
+          <include name="CloseBrowser"/>
+          <include name="verifyTextDigitalBanking"/>
+          <include name="close"/>
+          <include name="verifyProduct"/>
+          <include name="openBrowser"/>
         </methods>
-      </class> <!-- testng.TestNgMyTripApp -->
+      </class> <!-- testng.ICICIBank -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -7,19 +7,20 @@
   <test thread-count="1" parallel="classes" name="ChromeTest(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="testng.TestNgMyTripApp">
+      <class name="testng.ICICIBank">
         <methods>
-          <include name="VerifyMyBooking"/>
-          <include name="afterMethod"/>
           <include name="afterSuite"/>
+          <include name="OpenUrl"/>
+          <include name="CloseBrowser"/>
+          <include name="OpenBrowser"/>
+          <include name="verifyTextDigitalBanking"/>
+          <include name="close"/>
           <include name="afterTest"/>
-          <include name="OpenURL"/>
-          <include name="OpenBrowser"/>
-          <include name="OpenBrowser"/>
-          <include name="VerifySignInPage"/>
-          <include name="closeBrowser"/>
+          <include name="verifyLoginButton"/>
+          <include name="verifyProduct"/>
+          <include name="rowser"/>
         </methods>
-      </class> <!-- testng.TestNgMyTripApp -->
+      </class> <!-- testng.ICICIBank -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
