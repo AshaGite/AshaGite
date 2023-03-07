@@ -1,5 +1,8 @@
 package testng;
-//testNG_ICICIBank;
+
+//ChangesTo ICICI Bank
+
+
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -26,7 +29,7 @@ import com.beust.jcommander.Parameter;
 
 import ICICIBank.HomePage;
 import browser.Browser;
-///2877
+
 public class ICICIBank extends Browser{
 
 	private WebDriver driver;
