@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" parallel ="classes" name = "Suite" >
-<listeners>
-		<listener class-name="extendReport.ExtentTestNGIReporterListener" />
-	</listeners>
-
-<test  name="ChromeTest">
-<parameter name="browser" value="Chrome"></parameter>
-   
-      <classes>
-         <class name = "testng.ICICIBank" />
-      </classes>
-   </test> <!--ChromeTest-->
-   
-   
-  
-   
-
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testng.ICICIBank"/>
+      <class name="testng.TestNGFacebook"/>
+      <class name="testng.TestNG_Rediff_Mail"/>
+      <class name="testng.TestNG_Instagram"/>
+      <class name="testng.TestNgMyTripApp"/>
+      <class name="testng.TestNGAjio"/>
+      <class name="testng.TestNGClassSNDTUniversity"/>
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->
