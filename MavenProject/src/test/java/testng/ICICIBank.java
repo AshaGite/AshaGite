@@ -1,6 +1,6 @@
 package testng;
 
-//ChangesTo ICICI Banks
+//Helloo
 
 
 import java.util.ArrayList;
@@ -73,7 +73,7 @@ if(browserName.equals("Chrome")) {
 		
 
 		String actualText=homePage.ScrollDigitalBanking();
-		String expectedText="DigitalBanking";
+		String expectedText="DIGITAL BANKING";
 		
 		String actualURL=driver.getCurrentUrl();
 		String expectedURL="https://www.icicibank.com/";
