@@ -107,7 +107,7 @@ public void verifyKidsGetText() throws InterruptedException {
 //	}
 }
 @Test()
-public void verifyMenText() {
+public void verifyMenText() throws InterruptedException {
 	testID="T123";
 	System.out.println("Test-B");
 //CustomerCarePage customerCarePage=new CustomerCarePage(driver);
@@ -120,6 +120,8 @@ public void verifyMenText() {
 
 
 	homePage.clickOnMen();
+	Thread.sleep(3000);
+	
 String actualURL=driver.getCurrentUrl();
 String expectedURL="https://www.ajio.com/shop/men";
 softAssert =new SoftAssert();

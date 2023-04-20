@@ -38,10 +38,10 @@ public class ICICIBank extends Browser{
 	static ExtentTest test;
 	static ExtentHtmlReporter reporter;
 
+	@Parameters("browser")
 	@BeforeTest
 
-	@Parameters("browser")
-
+	
 	public void OpenBrowser(String browserName) throws Exception {
 		reporter = new ExtentHtmlReporter("test-output/ExtendReport/Extent.html");
 		ExtentReports extend = new ExtentReports();
@@ -49,12 +49,14 @@ public class ICICIBank extends Browser{
 if(browserName.equals("Chrome")) {
 	driver=openChromeBrwser();
 }
-	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-}		
+	}
+//	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//}		
 	
 
 	@BeforeClass
-	public void rowser() {
+	public void browser() throws InterruptedException {
+		Thread.sleep(3000);
 		 homePage=new HomePage(driver);
 
 		}
@@ -62,6 +64,7 @@ if(browserName.equals("Chrome")) {
 	@BeforeMethod
 	public void OpenUrl() throws InterruptedException {
 		driver.get("https://www.icicibank.com/");
+		Thread.sleep(3000);
 		 homePage=new HomePage(driver);
 		
 		soft=new SoftAssert();
@@ -138,46 +141,30 @@ if(browserName.equals("Chrome")) {
 
 	
 	@AfterMethod
-	public void close() {
+	public void close() 
+	{
 		
 	System.out.println("After Method");
 	}
 	
 	@AfterClass
-	public void CloseBrowser() {
+	public void CloseBrowser()
+	{
 		driver.quit();
 	}
 	
 	
 	@AfterTest
-	public void afterTest() {
+	public void afterTest()
+	{
 		driver=null;
-		System.gc();	}
+		System.gc();	
+		}
 	
 	@AfterSuite
-	public void afterSuite() {
+	public void afterSuite() 
+	{
 	System.out.println("After suite");	
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
+	}

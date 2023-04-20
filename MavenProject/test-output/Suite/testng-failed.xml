@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="extendReport.ExtentTestNGIReporterListener"/>
   </listeners>
-  <test thread-count="1" parallel="classes" name="ChromeTest(failed)">
-    <parameter name="browser" value="Chrome"/>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="testng.TestNG_Rediff_Mail">
+      <class name="testng.JalaAcademy">
         <methods>
           <include name="OpenBrowser"/>
-          <include name="verifyCasualBag"/>
-          <include name="afterTest"/>
-          <include name="openURL"/>
-          <include name="CloseBrowser"/>
-          <include name="verifyFootwear"/>
-          <include name="close"/>
-          <include name="openBrowser"/>
+          <include name="verifyContactUs"/>
+          <include name="verifyTecnologyButton"/>
+          <include name="verifyMobileNOText"/>
           <include name="afterSuite"/>
+          <include name="verifyHomePageTitle"/>
+          <include name="verifyCollaborations"/>
+          <include name="afterClass"/>
+          <include name="verifyCareers"/>
+          <include name="verifyTextHomePage"/>
+          <include name="verifyBrightITCareerButton"/>
+          <include name="OpenLink"/>
+          <include name="verifyAboutUsPage"/>
+          <include name="verifyJIRA"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- testng.TestNG_Rediff_Mail -->
+      </class> <!-- testng.JalaAcademy -->
     </classes>
-  </test> <!-- ChromeTest(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

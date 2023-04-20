@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 14 20:09:43 IST 2023</td>
+<td>Started on:</td><td>Sun Apr 02 11:49:25 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (131 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2501 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,37 +75,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.openBrowser()'><b>openBrowser</b><br>Test class: testng.TestNGClassSNDTUniversity<br>Parameters: Chrome</td>
-<td><div><pre>java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at browser.Browser.openChromeBrwser(Browser.java:12)
-	at testng.TestNGClassSNDTUniversity.openBrowser(TestNGClassSNDTUniversity.java:38)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace403147759", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace403147759'><pre>java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at browser.Browser.openChromeBrwser(Browser.java:12)
-	at testng.TestNGClassSNDTUniversity.openBrowser(TestNGClassSNDTUniversity.java:38)
+<td title='testng.ICICIBank.browser()'><b>browser</b><br>Test class: testng.ICICIBank</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:65)
+	at ICICIBank.HomePage.&lt;init&gt;(HomePage.java:43)
+	at testng.ICICIBank.browser(ICICIBank.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1632413663", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1632413663'><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:65)
+	at ICICIBank.HomePage.&lt;init&gt;(HomePage.java:43)
+	at testng.ICICIBank.browser(ICICIBank.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
-	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
@@ -120,8 +113,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>1</td>
+<td>testng.ICICIBank@479d31f3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -131,45 +124,45 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.closeed()'><b>closeed</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
+<td title='testng.ICICIBank.afterTest()'><b>afterTest</b><br>Test class: testng.ICICIBank</td>
 <td></td>
-<td>-1676385583</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>-1680416367</td>
+<td>testng.ICICIBank@479d31f3</td></tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.openLink()'><b>openLink</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
+<td title='testng.ICICIBank.close()'><b>close</b><br>Test class: testng.ICICIBank</td>
 <td></td>
-<td>-1676385583</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>-1680416367</td>
+<td>testng.ICICIBank@479d31f3</td></tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.afteTest()'><b>afteTest</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
+<td title='testng.ICICIBank.OpenUrl()'><b>OpenUrl</b><br>Test class: testng.ICICIBank</td>
 <td></td>
-<td>-1676385583</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>-1680416367</td>
+<td>testng.ICICIBank@479d31f3</td></tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.closeed()'><b>closeed</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
+<td title='testng.ICICIBank.OpenUrl()'><b>OpenUrl</b><br>Test class: testng.ICICIBank</td>
 <td></td>
-<td>-1676385583</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>-1680416367</td>
+<td>testng.ICICIBank@479d31f3</td></tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.quit()'><b>quit</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
+<td title='testng.ICICIBank.close()'><b>close</b><br>Test class: testng.ICICIBank</td>
 <td></td>
-<td>-1676385583</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>-1680416367</td>
+<td>testng.ICICIBank@479d31f3</td></tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.openLink()'><b>openLink</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
+<td title='testng.ICICIBank.OpenUrl()'><b>OpenUrl</b><br>Test class: testng.ICICIBank</td>
 <td></td>
-<td>-1676385583</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>-1680416367</td>
+<td>testng.ICICIBank@479d31f3</td></tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.closeed()'><b>closeed</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
+<td title='testng.ICICIBank.close()'><b>close</b><br>Test class: testng.ICICIBank</td>
 <td></td>
-<td>-1676385583</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>-1680416367</td>
+<td>testng.ICICIBank@479d31f3</td></tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.openLink()'><b>openLink</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
+<td title='testng.ICICIBank.CloseBrowser()'><b>CloseBrowser</b><br>Test class: testng.ICICIBank</td>
 <td></td>
-<td>-1676385583</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>-1680416367</td>
+<td>testng.ICICIBank@479d31f3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -179,37 +172,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.getTextStudentName()'><b>getTextStudentName</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
-<td><div><pre>java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at browser.Browser.openChromeBrwser(Browser.java:12)
-	at testng.TestNGClassSNDTUniversity.openBrowser(TestNGClassSNDTUniversity.java:38)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace243194708", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace243194708'><pre>java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at browser.Browser.openChromeBrwser(Browser.java:12)
-	at testng.TestNGClassSNDTUniversity.openBrowser(TestNGClassSNDTUniversity.java:38)
+<td title='testng.ICICIBank.verifyTextDigitalBanking()'><b>verifyTextDigitalBanking</b><br>Test class: testng.ICICIBank</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:65)
+	at ICICIBank.HomePage.&lt;init&gt;(HomePage.java:43)
+	at testng.ICICIBank.browser(ICICIBank.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1873091796", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1873091796'><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:65)
+	at ICICIBank.HomePage.&lt;init&gt;(HomePage.java:43)
+	at testng.ICICIBank.browser(ICICIBank.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
-	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
@@ -225,39 +211,32 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>testng.ICICIBank@479d31f3</td></tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.verifyURLOnStudent()'><b>verifyURLOnStudent</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
-<td><div><pre>java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at browser.Browser.openChromeBrwser(Browser.java:12)
-	at testng.TestNGClassSNDTUniversity.openBrowser(TestNGClassSNDTUniversity.java:38)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace278240974", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace278240974'><pre>java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at browser.Browser.openChromeBrwser(Browser.java:12)
-	at testng.TestNGClassSNDTUniversity.openBrowser(TestNGClassSNDTUniversity.java:38)
+<td title='testng.ICICIBank.verifyProduct()'><b>verifyProduct</b><br>Test class: testng.ICICIBank</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:65)
+	at ICICIBank.HomePage.&lt;init&gt;(HomePage.java:43)
+	at testng.ICICIBank.browser(ICICIBank.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace646910062", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace646910062'><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:65)
+	at ICICIBank.HomePage.&lt;init&gt;(HomePage.java:43)
+	at testng.ICICIBank.browser(ICICIBank.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
-	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
@@ -273,39 +252,32 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>testng.ICICIBank@479d31f3</td></tr>
 <tr>
-<td title='testng.TestNGClassSNDTUniversity.verifyURLOnStudentName()'><b>verifyURLOnStudentName</b><br>Test class: testng.TestNGClassSNDTUniversity</td>
-<td><div><pre>java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at browser.Browser.openChromeBrwser(Browser.java:12)
-	at testng.TestNGClassSNDTUniversity.openBrowser(TestNGClassSNDTUniversity.java:38)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace752001567", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace752001567'><pre>java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at browser.Browser.openChromeBrwser(Browser.java:12)
-	at testng.TestNGClassSNDTUniversity.openBrowser(TestNGClassSNDTUniversity.java:38)
+<td title='testng.ICICIBank.verifyLoginButton()'><b>verifyLoginButton</b><br>Test class: testng.ICICIBank</td>
+<td><div><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:65)
+	at ICICIBank.HomePage.&lt;init&gt;(HomePage.java:43)
+	at testng.ICICIBank.browser(ICICIBank.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace113411247", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace113411247'><pre>java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:65)
+	at ICICIBank.HomePage.&lt;init&gt;(HomePage.java:43)
+	at testng.ICICIBank.browser(ICICIBank.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
 	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:627)
-	at org.testng.TestRunner.run(TestRunner.java:589)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
@@ -321,7 +293,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>testng.TestNGClassSNDTUniversity@1cbbffcd</td></tr>
+<td>testng.ICICIBank@479d31f3</td></tr>
 </table><p>
 </body>
 </html>

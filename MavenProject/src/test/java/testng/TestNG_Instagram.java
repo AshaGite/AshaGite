@@ -1,4 +1,4 @@
-package testng;
+ package testng;
 import java.io.FileNotFoundException;
 
 import java.io.IOException;
@@ -38,7 +38,7 @@ public class TestNG_Instagram extends Browser {
 	//12345
 		WebDriver driver;
 		private SignUp signUp;
-	private String TestID;
+		private String TestID;
 
 		private SoftAssert softAssert;
 

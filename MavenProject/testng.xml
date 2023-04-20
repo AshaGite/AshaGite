@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+<listeners>
+<listener class-name="extendReport.ExtentTestNGIReporterListener"/>
+</listeners>
+  <test thread-count="1" name="Test">
+  <parameter name="browser" value="Firefox"></parameter>
     <classes>
-      <class name="testng.ICICIBank"/>
-      <class name="testng.TestNGFacebook"/>
-      <class name="testng.TestNG_Rediff_Mail"/>
-      <class name="testng.TestNG_Instagram"/>
-      <class name="testng.TestNgMyTripApp"/>
-      <class name="testng.TestNGAjio"/>
-      <class name="testng.TestNGClassSNDTUniversity"/>
+      <class name="testng.JalaAcademy"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
