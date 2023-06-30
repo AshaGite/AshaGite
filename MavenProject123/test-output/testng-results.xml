@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-24T10:31:14 IST" name="Suite" finished-at="2023-06-24T10:31:42 IST" duration-ms="28122">
+  <suite started-at="2023-06-27T17:55:04 IST" name="Suite" finished-at="2023-06-27T17:55:58 IST" duration-ms="53828">
     <groups>
     </groups>
-    <test started-at="2023-06-24T10:31:14 IST" name="ChromeTest" finished-at="2023-06-24T10:31:42 IST" duration-ms="28122">
+    <test started-at="2023-06-27T17:55:04 IST" name="ChromeTest" finished-at="2023-06-27T17:55:58 IST" duration-ms="53828">
       <class name="testNGPack.Facebook">
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:testNGPack.Facebook@2a54a73f]" started-at="2023-06-24T10:31:14 IST" name="openBrowser" finished-at="2023-06-24T10:31:20 IST" duration-ms="5865" status="PASS">
+        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:04 IST" name="openBrowser" finished-at="2023-06-27T17:55:09 IST" duration-ms="4561" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,49 +18,160 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testNGPack.Facebook@2a54a73f]" started-at="2023-06-24T10:31:20 IST" name="beforeClass" finished-at="2023-06-24T10:31:20 IST" duration-ms="112" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:09 IST" name="beforeClass" finished-at="2023-06-27T17:55:09 IST" duration-ms="84" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="openUrl()[pri:0, instance:testNGPack.Facebook@2a54a73f]" started-at="2023-06-24T10:31:20 IST" name="openUrl" finished-at="2023-06-24T10:31:24 IST" duration-ms="3653" status="PASS">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:09 IST" name="openUrl" finished-at="2023-06-27T17:55:13 IST" duration-ms="4013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openUrl -->
-        <test-method signature="verifyLogin()[pri:1, instance:testNGPack.Facebook@2a54a73f]" started-at="2023-06-24T10:31:24 IST" name="verifyLogin" finished-at="2023-06-24T10:31:30 IST" duration-ms="6064" status="PASS">
+        <test-method signature="verifyLogin()[pri:1, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:13 IST" name="verifyLogin" finished-at="2023-06-27T17:55:17 IST" duration-ms="4632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="logoutAccount(org.testng.ITestResult)[pri:0, instance:testNGPack.Facebook@2a54a73f]" started-at="2023-06-24T10:31:30 IST" name="logoutAccount" finished-at="2023-06-24T10:31:30 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="logoutAccount(org.testng.ITestResult)[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:17 IST" name="logoutAccount" finished-at="2023-06-27T17:55:17 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLogin status=SUCCESS method=Facebook.verifyLogin()[pri:1, instance:testNGPack.Facebook@2a54a73f] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLogin status=SUCCESS method=Facebook.verifyLogin()[pri:1, instance:testNGPack.Facebook@3d6f0054] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutAccount -->
-        <test-method is-config="true" signature="openUrl()[pri:0, instance:testNGPack.Facebook@2a54a73f]" started-at="2023-06-24T10:31:30 IST" name="openUrl" finished-at="2023-06-24T10:31:32 IST" duration-ms="2047" status="PASS">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:17 IST" name="openUrl" finished-at="2023-06-27T17:55:20 IST" duration-ms="2224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openUrl -->
-        <test-method signature="verifySignUpPage()[pri:2, instance:testNGPack.Facebook@2a54a73f]" started-at="2023-06-24T10:31:32 IST" name="verifySignUpPage" finished-at="2023-06-24T10:31:41 IST" duration-ms="8679" status="PASS">
+        <test-method signature="verifyTermsLinkPage()[pri:2, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:20 IST" name="verifyTermsLinkPage" finished-at="2023-06-27T17:55:26 IST" duration-ms="6715" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySignUpPage -->
-        <test-method is-config="true" signature="logoutAccount(org.testng.ITestResult)[pri:0, instance:testNGPack.Facebook@2a54a73f]" started-at="2023-06-24T10:31:41 IST" name="logoutAccount" finished-at="2023-06-24T10:31:41 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyTermsLinkPage -->
+        <test-method is-config="true" signature="logoutAccount(org.testng.ITestResult)[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:26 IST" name="logoutAccount" finished-at="2023-06-27T17:55:26 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySignUpPage status=SUCCESS method=Facebook.verifySignUpPage()[pri:2, instance:testNGPack.Facebook@2a54a73f] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTermsLinkPage status=SUCCESS method=Facebook.verifyTermsLinkPage()[pri:2, instance:testNGPack.Facebook@3d6f0054] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutAccount -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:testNGPack.Facebook@2a54a73f]" started-at="2023-06-24T10:31:41 IST" name="afterTest" finished-at="2023-06-24T10:31:42 IST" duration-ms="1556" status="PASS">
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:26 IST" name="openUrl" finished-at="2023-06-27T17:55:28 IST" duration-ms="1818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="verifyPrivacyPolicyLinks()[pri:3, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:28 IST" name="verifyPrivacyPolicyLinks" finished-at="2023-06-27T17:55:42 IST" duration-ms="14289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPrivacyPolicyLinks -->
+        <test-method is-config="true" signature="logoutAccount(org.testng.ITestResult)[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:42 IST" name="logoutAccount" finished-at="2023-06-27T17:55:42 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPrivacyPolicyLinks status=SUCCESS method=Facebook.verifyPrivacyPolicyLinks()[pri:3, instance:testNGPack.Facebook@3d6f0054] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutAccount -->
+        <test-method is-config="true" signature="openUrl()[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:42 IST" name="openUrl" finished-at="2023-06-27T17:55:44 IST" duration-ms="1907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openUrl -->
+        <test-method signature="verifyCookiesPolicy()[pri:4, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:44 IST" name="verifyCookiesPolicy" finished-at="2023-06-27T17:55:56 IST" duration-ms="11520" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//span[text()='Cookies Policy'])[1]"}
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EAIRO25', ip: '192.168.11.90', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Care\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:13882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2908f1f11423b5c46ea11456416ff682
+*** Element info: {Using=xpath, value=(//span[text()='Cookies Policy'])[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//span[text()='Cookies Policy'])[1]"}
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EAIRO25', ip: '192.168.11.90', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\Care\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:13882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2908f1f11423b5c46ea11456416ff682
+*** Element info: {Using=xpath, value=(//span[text()='Cookies Policy'])[1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.getText(Unknown Source)
+at Facebook.CookiesPolicy.getTextCookiesPolicy(CookiesPolicy.java:29)
+at testNGPack.Facebook.verifyCookiesPolicy(Facebook.java:144)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCookiesPolicy -->
+        <test-method is-config="true" signature="logoutAccount(org.testng.ITestResult)[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:56 IST" name="logoutAccount" finished-at="2023-06-27T17:55:56 IST" duration-ms="409" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyCookiesPolicy status=FAILURE method=Facebook.verifyCookiesPolicy()[pri:4, instance:testNGPack.Facebook@3d6f0054] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutAccount -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testNGPack.Facebook@3d6f0054]" started-at="2023-06-27T17:55:56 IST" name="afterTest" finished-at="2023-06-27T17:55:58 IST" duration-ms="1522" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

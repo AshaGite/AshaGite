@@ -12,7 +12,7 @@
           <include name="logoutAccount"/>
           <include name="beforeClass"/>
           <include name="openUrl"/>
-          <include name="verifySignUpPage"/>
+          <include name="verifyCookiesPolicy"/>
           <include name="afterTest"/>
           <include name="openBrowser"/>
         </methods>

@@ -17,7 +17,7 @@ public static void main(String[] args) throws InterruptedException {
 	options.addArguments("--remote-allow-origins=*");
 	driver=new ChromeDriver(options);
 	Thread.sleep(1000);
-	driver.get("https://www.facebook.com/");
+	driver.get("https://www.facebook.com");
 	Thread.sleep(1000);
 
 	WebElement userName=driver.findElement(By.xpath("//input[@type='text']"));
